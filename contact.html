@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Cristo Viene Pronto by Deborah — Holy Hour ministry. Email us at cristovieneprontobydeborah@gmail.com">
+  <link rel="stylesheet" href="styles.css">
+  <title>Contact — Cristo Viene Pronto by Deborah</title>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <div class="page-header">
+    <h1>✉️ Contact Us</h1>
+    <p>Reach out — we'd love to pray with you and for you</p>
+  </div>
+
+  <section class="section">
+
+    <div class="contact-wrapper">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <p>We welcome all who seek prayer, guidance, or community. Whether you have a prayer request, a question, or simply want to connect, please reach out.</p>
+
+        <div class="contact-detail" style="margin-top:24px;">
+          <span class="icon">📧</span>
+          <div>
+            <strong>Email</strong><br>
+            <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="icon">✝️</span>
+          <div>
+            <strong>Ministry</strong><br>
+            Cristo Viene Pronto by Deborah
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="icon">🕊️</span>
+          <div>
+            <strong>Our Promise</strong><br>
+            We will pray for every intention sent to us.
+          </div>
+        </div>
+
+        <div class="verse-box" style="margin-top:30px;">
+          <p>"Ask and it will be given to you; seek and you will find; knock and the door will be opened to you."</p>
+          <cite>— Matthew 7:7</cite>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div>
+        <form id="contact-form" action="https://formsubmit.co/cristovieneprontobydeborah@gmail.com" method="POST" novalidate>
+          <!-- FormSubmit configuration -->
+          <input type="hidden" name="_subject" value="Holy Hour Website — New Message">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://debeortiiz.github.io/Holy-Hour-Website-/contact.html?sent=true">
+          <input type="hidden" name="_template" value="table">
+
+          <label for="name">Your Name <span style="color:#c0392b;">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+          <label for="email">Your Email <span style="color:#c0392b;">*</span></label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Prayer request, question, etc.">
+
+          <label for="message">Message <span style="color:#c0392b;">*</span></label>
+          <textarea id="message" name="message" placeholder="Share your prayer request or message..." required></textarea>
+
+          <button type="submit" class="btn" style="width:100%;text-align:center;">🙏 Send Message</button>
+
+          <div class="success-msg" id="success-msg">
+            ✅ Thank you! Your message has been sent. We will pray for your intention. God bless you! ❤️
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="site.js"></script>
+  <script>
+    // Show success message if redirected back after form submission
+    if (window.location.search.includes('sent=true')) {
+      const msg = document.getElementById('success-msg');
+      if (msg) {
+        msg.style.display = 'block';
+        // Scroll to message
+        setTimeout(() => msg.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+      }
+    }
+
+    // Basic client-side validation
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        if (!name || !email || !message) {
+          e.preventDefault();
+          alert('Please fill in your name, email, and message before sending.');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
