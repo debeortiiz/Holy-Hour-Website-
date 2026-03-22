@@ -1,35 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Iglesia Monte Sinai - Pelea La Batalla</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Holy Hour - A time of prayer, Scripture meditation, and Christian devotion open to all believers.">
+    <title>Holy Hour</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Georgia, serif;
+            background: #f5f0e8;
+            color: #2c2c2c;
+        }
+        header {
+            background: #3b2a1a;
+            color: #f5e6c8;
+            text-align: center;
+            padding: 2.5rem 1rem;
+        }
+        header h1 { font-size: 2.4rem; letter-spacing: 2px; }
+        header p { margin-top: 0.5rem; font-style: italic; font-size: 1.1rem; color: #d4b896; }
+        nav {
+            background: #5a3e2b;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+        nav a {
+            color: #f5e6c8;
+            text-decoration: none;
+            padding: 0.85rem 1.4rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+        nav a:hover { background: #7a5a3a; }
+        main {
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            padding: 0 1rem;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .intro h2 { font-size: 1.6rem; color: #5a3e2b; margin-bottom: 0.5rem; }
+        .intro p { font-size: 1.05rem; color: #555; max-width: 650px; margin: 0 auto; line-height: 1.7; }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            padding: 1.8rem 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: block;
+        }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+        .card-icon { font-size: 2.2rem; margin-bottom: 0.7rem; }
+        .card h3 { font-size: 1.2rem; color: #3b2a1a; margin-bottom: 0.5rem; }
+        .card p { font-size: 0.95rem; color: #666; line-height: 1.6; }
+        footer {
+            background: #3b2a1a;
+            color: #d4b896;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.7rem; }
+            nav a { padding: 0.7rem 1rem; font-size: 0.9rem; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Iglesia Monte Sinai - Pelea La Batalla</h1>
-    <p>Address: 82 Vanderbilt Ave, West Hartford, CT 06110</p>
-    <h2>Service Times</h2>
-    <ul>
-        <li>Sunday: 11 AM - 1 PM</li>
-        <li>Thursday: 7 PM - 9 PM</li>
-    </ul>
-    <h2>Scripture</h2>
-    <p>Details about the scripture will go here.</p>
-    <h2>Prayers</h2>
-    <p>Details about prayers will go here.</p>
-    <h2>Testimonies</h2>
-    <p>Details about testimonies will go here.</p>
-    <h2>Bible Study</h2>
-    <p>Details about bible study will go here.</p>
-    <h2>Worship</h2>
-    <p>Details about worship will go here.</p>
-    <h2>Resources</h2>
-    <p>Details about resources will go here.</p>
-    <h2>Community</h2>
-    <p>Details about community will go here.</p>
-    <h2>Calendar</h2>
-    <p>Details about the church calendar will go here.</p>
-    <h2>Spiritual Growth</h2>
-    <p>Details about spiritual growth will go here.</p>
-    <h2>Missions</h2>
-    <p>Details about missions will go here.</p>
+    <header>
+        <h1>✝ Holy Hour</h1>
+        <p>"Be still and know that I am God." — Psalm 46:10</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="prayers.html">Prayers</a>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to Holy Hour</h2>
+            <p>A sacred time set apart for prayer, Scripture meditation, and drawing near to God. All followers of Christ are welcome, regardless of denomination.</p>
+        </section>
+
+        <div class="cards">
+            <a class="card" href="schedule.html">
+                <div class="card-icon">🕐</div>
+                <h3>Holy Hour Schedule</h3>
+                <p>Join us for our weekly time of communal prayer and worship. Find service times and upcoming gatherings.</p>
+            </a>
+
+            <a class="card" href="prayers.html">
+                <div class="card-icon">🙏</div>
+                <h3>Prayer Guide</h3>
+                <p>Explore a variety of Christian prayers — intercessory, praise, thanksgiving, and contemplative — for your personal devotion.</p>
+            </a>
+
+            <a class="card" href="scripture.html">
+                <div class="card-icon">📖</div>
+                <h3>Scripture Meditation &amp; Reflection</h3>
+                <p>Lectio Divina and guided Scripture readings to help you encounter the living Word of God in your daily life.</p>
+            </a>
+
+            <a class="card" href="community.html">
+                <div class="card-icon">🤝</div>
+                <h3>Christian Community &amp; Fellowship</h3>
+                <p>Connect with fellow believers, share testimonies, support one another in faith, and grow together in Christ.</p>
+            </a>
+
+            <a class="card" href="worship.html">
+                <div class="card-icon">🎵</div>
+                <h3>Worship &amp; Praise</h3>
+                <p>Songs of praise and hymns to lift your spirit and glorify God. Resources for personal and corporate worship.</p>
+            </a>
+
+            <a class="card" href="resources.html">
+                <div class="card-icon">📚</div>
+                <h3>Spiritual Resources</h3>
+                <p>Bible study guides, devotionals, and tools for spiritual growth to deepen your walk with Christ.</p>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Holy Hour &mdash; A time of prayer and devotion for all Christians.</p>
+    </footer>
 </body>
 </html>
