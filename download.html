@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download – Holy Hour</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px 60px;
+        }
+        .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 14px; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+        .content { max-width: 860px; margin: 0 auto; padding: 60px 20px; }
+
+        .download-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            margin-bottom: 56px;
+        }
+        .download-card {
+            border: 2px solid #3b2d8f;
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .download-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(59,45,143,0.15); }
+        .download-card .platform-icon { font-size: 4rem; margin-bottom: 16px; }
+        .download-card h2 { color: #3b2d8f; font-size: 1.4rem; margin-bottom: 10px; }
+        .download-card p { color: #555; margin-bottom: 24px; line-height: 1.6; }
+        .store-btn {
+            display: inline-block;
+            background: #3b2d8f;
+            color: #fff;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        .store-btn:hover { background: #1a1a6e; }
+        .store-btn.coming-soon {
+            background: #9ca3af;
+            cursor: default;
+        }
+
+        .requirements {
+            background: #f8f6ff;
+            border-radius: 12px;
+            padding: 32px 28px;
+            margin-bottom: 40px;
+        }
+        .requirements h2 { color: #3b2d8f; margin-bottom: 18px; font-size: 1.3rem; }
+        .req-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .req-item h3 { color: #1a1a6e; font-size: 1rem; margin-bottom: 6px; }
+        .req-item p { color: #555; font-size: 0.93rem; line-height: 1.6; }
+
+        .faq { margin-bottom: 40px; }
+        .faq h2 { color: #1a1a6e; font-size: 1.5rem; margin-bottom: 24px; text-align: center; }
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 18px 0;
+        }
+        .faq-item h3 { color: #3b2d8f; font-size: 1.05rem; margin-bottom: 8px; }
+        .faq-item p { color: #555; line-height: 1.7; }
+
+        footer {
+            background: #0f0f4a;
+            color: #aaa;
+            text-align: center;
+            padding: 36px 20px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        footer a { color: #b8a9ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="features.html">Features</a>
+            <a href="download.html" class="active">Download</a>
+            <a href="churches.html">Find a Church</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>Download Holy Hour</h1>
+    <p>Get the app that helps you spend meaningful time with God every single day. Free to download.</p>
+</div>
+
+<div class="content">
+
+    <div class="download-cards">
+        <div class="download-card">
+            <div class="platform-icon">🍎</div>
+            <h2>iOS – iPhone &amp; iPad</h2>
+            <p>Download Holy Hour from the Apple App Store and enjoy it on your iPhone or iPad. Requires iOS 14 or later.</p>
+            <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="store-btn">📱 App Store</a>
+        </div>
+
+        <div class="download-card">
+            <div class="platform-icon">🤖</div>
+            <h2>Android</h2>
+            <p>Download Holy Hour from Google Play and use it on any Android phone or tablet. Requires Android 8.0 or later.</p>
+            <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="store-btn">▶ Google Play</a>
+        </div>
+    </div>
+
+    <div class="requirements">
+        <h2>📋 System Requirements</h2>
+        <div class="req-grid">
+            <div class="req-item">
+                <h3>🍎 iOS</h3>
+                <p>iOS 14.0 or later<br>iPhone, iPad, iPod touch<br>~50 MB storage</p>
+            </div>
+            <div class="req-item">
+                <h3>🤖 Android</h3>
+                <p>Android 8.0 (Oreo) or later<br>Any Android phone or tablet<br>~40 MB storage</p>
+            </div>
+            <div class="req-item">
+                <h3>🌐 Internet</h3>
+                <p>Internet connection required for Scripture updates and prayer requests. Some features available offline.</p>
+            </div>
+            <div class="req-item">
+                <h3>💰 Cost</h3>
+                <p>Holy Hour is free to download. Core features are free. Premium content may be available.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>Is Holy Hour free to use?</h3>
+            <p>Yes! Holy Hour is free to download and the core features — daily prayer, Scripture reading, and prayer requests — are completely free. We want every believer to have access to these tools regardless of their financial situation.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is Holy Hour for my denomination?</h3>
+            <p>Absolutely. Holy Hour is designed for all Christian denominations. Whether you are Baptist, Pentecostal, Methodist, non-denominational, or any other tradition, you will find Holy Hour valuable. We focus on what unites us: Jesus Christ.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I submit prayer requests through the app?</h3>
+            <p>Yes! You can submit prayer requests through the app or through our <a href="contact.html" style="color:#3b2d8f;">contact page</a>. Deborah personally prays over every request submitted.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I report a problem with the app?</h3>
+            <p>If you experience any issues, please contact us at <a href="mailto:cristovieneprontobydeborah@gmail.com" style="color:#3b2d8f;">cristovieneprontobydeborah@gmail.com</a>. We will respond as quickly as possible.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is the app available in Spanish?</h3>
+            <p>We are working to support multiple languages. The app is currently primarily in English, but Spanish language support is a priority given our heart for the Latino Christian community. <em>Cristo Viene Pronto!</em></p>
+        </div>
+    </div>
+
+    <div style="text-align:center; background:#f8f6ff; border-radius:12px; padding:36px 24px;">
+        <h3 style="color:#1a1a6e; font-size:1.4rem; margin-bottom:12px;">Have Questions?</h3>
+        <p style="color:#555; margin-bottom:20px; line-height:1.7;">Can't find what you're looking for? Reach out to us directly — we love hearing from the Holy Hour community.</p>
+        <a href="contact.html" style="display:inline-block; background:#3b2d8f; color:#fff; padding:12px 26px; border-radius:30px; text-decoration:none; font-weight:700;">Contact Us</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — Prayer, Scripture &amp; Spiritual Growth</p>
+    <p style="margin-top:6px;">Contact: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">Cristo Viene Pronto — All denominations welcome ✝</p>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="download.html">Download</a>
+        <a href="churches.html">Find a Church</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
