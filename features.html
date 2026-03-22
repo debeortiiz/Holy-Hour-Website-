@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Holy Hour app features — daily scripture, guided prayers, rosary, liturgical calendar, and more.">
+  <title>Features — Holy Hour</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .feature-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 64px 0;
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .feature-row:last-child { border-bottom: none; }
+    .feature-row.reverse { direction: rtl; }
+    .feature-row.reverse > * { direction: ltr; }
+    .feature-detail-icon {
+      width: 80px; height: 80px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--purple-mid), var(--blue));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.2rem;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 28px rgba(139,61,255,0.35);
+    }
+    .feature-detail-list { margin-top: 20px; }
+    .feature-detail-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: var(--text-body);
+      font-size: 0.97rem;
+    }
+    .feature-detail-list li::before {
+      content: '✓';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 22px; height: 22px;
+      background: linear-gradient(135deg, var(--purple-mid), var(--blue));
+      color: white;
+      border-radius: 50%;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-top: 1px;
+    }
+    .feature-visual-box {
+      background: linear-gradient(135deg, var(--purple-dark), #0f2463);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: var(--shadow);
+    }
+    .fv-item {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .fv-item-icon { font-size: 1.4rem; }
+    .fv-item-label { font-size: 0.8rem; color: rgba(255,255,255,0.55); }
+    .fv-item-val { font-weight: 600; font-size: 0.95rem; }
+    @media (max-width: 768px) {
+      .feature-row, .feature-row.reverse { grid-template-columns: 1fr; direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-icon">🕊</span>
+      Holy Hour
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="download.html" class="btn btn-primary nav-cta" style="padding:10px 22px;font-size:0.9rem;">Get the App</a>
+    <button class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <button class="mobile-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="features.html">Features</a>
+  <a href="download.html">Download</a>
+  <a href="contact.html">Contact</a>
+  <a href="download.html" class="btn btn-primary" style="margin-top:16px;">Get the App</a>
+</div>
+
+<!-- ====== PAGE HERO ====== -->
+<section class="page-hero">
+  <div class="container">
+    <span class="badge">App Features</span>
+    <h1>Everything You Need for Your <span class="text-gradient">Faith Journey</span></h1>
+    <p>Holy Hour is packed with thoughtfully designed features to help you pray, reflect, and grow closer to God each day.</p>
+  </div>
+</section>
+
+<!-- ====== FEATURE ROWS ====== -->
+<section class="section">
+  <div class="container">
+
+    <!-- 1: Daily Scripture -->
+    <div class="feature-row fade-up">
+      <div>
+        <div class="feature-detail-icon">📖</div>
+        <span class="badge">Scripture</span>
+        <h2 style="margin:12px 0 16px;">Daily Scripture &amp; <span class="text-gradient">Reflections</span></h2>
+        <p style="color:var(--text-body);margin-bottom:8px;">Begin each day with the Word of God. Our daily scripture feature delivers a handpicked Bible verse with a rich meditation to help you internalize God's message.</p>
+        <ul class="feature-detail-list">
+          <li>New verse every day from the liturgical calendar</li>
+          <li>Audio reading for hands-free listening</li>
+          <li>Personal reflection journal built in</li>
+          <li>Share your daily verse with friends and family</li>
+          <li>Offline access — no internet required</li>
+        </ul>
+      </div>
+      <div class="feature-visual-box">
+        <div class="fv-item"><span class="fv-item-icon">📖</span><div><div class="fv-item-label">Today's Reading</div><div class="fv-item-val">Psalm 46:10 — "Be still and know that I am God"</div></div></div>
+        <div class="fv-item"><span class="fv-item-icon">🔊</span><div><div class="fv-item-label">Audio</div><div class="fv-item-val">Listen Now ▶ 2 min</div></div></div>
+        <div class="fv-item"><span class="fv-item-icon">✏️</span><div><div class="fv-item-label">My Reflection</div><div class="fv-item-val">Add your thoughts…</div></div></div>
+        <div class="fv-item"><span class="fv-item-icon">📤</span><div><div class="fv-item-label">Share</div><div class="fv-item-val">Share Today's Verse</div></div></div>
+      </div>
+    </div>
+
+    <!-- 2: Guided Prayers -->
+    <div class="feature-row reverse fade-up">
+      <div>
+        <div class="feature-detail-icon">🙏</div>
+        <span class="badge">Prayer</span>
+        <h2 style="margin:12px 0 16px;">Guided <span class="text-gradient">Prayers</span></h2>
+        <p style="color:var(--text-body);margin-bottom:8px;">Access hundreds of traditional Catholic prayers and modern guided meditations for every moment of your day — from morning offering to night prayer.</p>
+        <ul class="feature-detail-list">
+          <li>Morning and evening prayer routines</li>
+          <li>Divine Mercy Chaplet with step-by-step guide</li>
+          <li>Prayers for special intentions</li>
+          <li>Angelus and Regina Caeli</li>
+          <li>Novenas for all occasions</li>
+        </ul>
+      </div>
+      <div class="feature-visual-box">
+        <div class="fv-item"><span class="fv-item-icon">🌅</span><div><div class="fv-item-label">Morning Prayer</div><div class="fv-item-val">Morning Offering — 5 min</div></div></div>
+        <div class="fv-item"><span class="fv-item-icon">✝️</span><div><div class="fv-item-label">Divine Mercy</div><div class="fv-item-val">Chaplet — 20 min</div></div></div>
+        <div class="fv-item"><span class="fv-item-icon">🌙</span><div><div class="fv-item-label">Evening Prayer</div><div class="fv-item-val">Night Prayer — 10 min</div></div></div>
+        <div class="fv-item"><span class="fv-item-icon">❤️</span><div><div class="fv-item-label">Intentions</div><div class="fv-item-val">Pray for 3 people today</div></div></div>
+      </div>
+    </div>
+
+    <!-- 3: Rosary -->
+    <div class="feature-row fade-up">
+      <div>
+        <div class="feature-detail-icon">📿</div>
+        <span class="badge">Rosary</span>
+        <h2 style="margin:12px 0 16px;">Full Rosary <span class="text-gradient">Experience</span></h2>
+        <p style="color:var(--text-body);margin-bottom:8px;">Pray all 20 mysteries of the Holy Rosary with our beautiful, fully guided experience. Perfect for beginners learning the rosary or experienced pray-ers deepening their practice.</p>
+        <ul class="feature-detail-list">
+          <li>All five sets of mysteries included</li>
+          <li>Audio guidance and meditations</li>
+          <li>Track your rosary streak</li>
+          <li>Mystery artwork and reflections</li>
+          <li>Family rosary mode</li>
+        </ul>
+      </div>
+      <div class="feature-visual-box">
+        <div class="fv-item"><span class="fv-item-icon">📿</span><div><div class="fv-item-label">Current Mystery</div><div class="fv-item-val">The Annunciation (1st Joyful)</div></div></div>
+        <div class="fv-item"><span class="fv-item-icon">🔢</span><div><div class="fv-item-label">Decade</div><div class="fv-item-val">Hail Mary 7 / 10</div></div></div>
+        <div class="fv-item"><span class="fv-item-icon">🔥</span><div><div class="fv-item-label">Streak</div><div class="fv-item-val">🔥 12 days in a row!</div></div></div>
+        <div class="fv-item"><span class="fv-item-icon">👨‍👩‍👧</span><div><div class="fv-item-label">Family Mode</div><div class="fv-item-val">Pray together</div></div></div>
+      </div>
+    </div>
+
+    <!-- 4: Holy Hour Timer -->
+    <div class="feature-row reverse fade-up">
+      <div>
+        <div class="feature-detail-icon">🕯</div>
+        <span class="badge">Holy Hour</span>
+        <h2 style="margin:12px 0 16px;">Sacred <span class="text-gradient">Hour Timer</span></h2>
+        <p style="color:var(--text-body);margin-bottom:8px;">Dedicate one full, structured hour to God. Our Holy Hour timer guides you through adoration, scripture, prayer, and intercession — making the most of every minute with the Lord.</p>
+        <ul class="feature-detail-list">
+          <li>Structured 60-minute guided session</li>
+          <li>Peaceful ambient sounds (church organ, nature)</li>
+          <li>Adoration mode for Eucharistic prayer</li>
+          <li>Intercession time with intentions</li>
+          <li>Gentle chime reminders</li>
+        </ul>
+      </div>
+      <div class="feature-visual-box">
+        <div style="text-align:center;padding:16px 0;">
+          <div style="font-size:3rem;font-weight:800;color:white;">47:23</div>
+          <div style="color:rgba(255,255,255,0.55);font-size:0.85rem;margin:4px 0 16px;">Remaining in Holy Hour</div>
+          <div style="display:flex;gap:8px;justify-content:center;">
+            <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:8px 16px;color:white;font-size:0.8rem;">⏸ Pause</div>
+            <div style="background:linear-gradient(135deg,var(--purple-mid),var(--blue));border-radius:8px;padding:8px 16px;color:white;font-size:0.8rem;">⏭ Skip</div>
+          </div>
+        </div>
+        <div class="fv-item"><span class="fv-item-icon">🎵</span><div><div class="fv-item-label">Ambient Sound</div><div class="fv-item-val">Gregorian Chant ♪</div></div></div>
+        <div class="fv-item"><span class="fv-item-icon">📍</span><div><div class="fv-item-label">Current Phase</div><div class="fv-item-val">Scripture Reading</div></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== MORE FEATURES ====== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header fade-up" style="color:white;">
+      <span class="badge">More Features</span>
+      <h2>And So Much <span class="text-gradient">More</span></h2>
+    </div>
+    <div class="features-grid" style="margin-top:40px;">
+      <div class="feature-card dark fade-up">
+        <div class="feature-icon">📅</div>
+        <h3>Liturgical Calendar</h3>
+        <p>Never miss a feast day, holy day, or fasting day. Full Catholic liturgical calendar with reminders.</p>
+      </div>
+      <div class="feature-card dark fade-up">
+        <div class="feature-icon">🫶</div>
+        <h3>Prayer Community</h3>
+        <p>Share intentions and pray for others in a safe, faith-centered global community of believers.</p>
+      </div>
+      <div class="feature-card dark fade-up">
+        <div class="feature-icon">📊</div>
+        <h3>Prayer Journal &amp; Stats</h3>
+        <p>Track your prayer habits, streaks, and spiritual growth with beautiful insights and journaling.</p>
+      </div>
+      <div class="feature-card dark fade-up">
+        <div class="feature-icon">🌐</div>
+        <h3>Multiple Languages</h3>
+        <p>Pray in your heart language. Holy Hour supports English, Spanish, and more coming soon.</p>
+      </div>
+      <div class="feature-card dark fade-up">
+        <div class="feature-icon">🔔</div>
+        <h3>Daily Reminders</h3>
+        <p>Custom notification scheduling so your holy hour is always protected in your busy day.</p>
+      </div>
+      <div class="feature-card dark fade-up">
+        <div class="feature-icon">📵</div>
+        <h3>Offline Mode</h3>
+        <p>Prayers, scripture, and the rosary are always available — even without an internet connection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="section section-soft text-center">
+  <div class="container fade-up">
+    <span class="badge">Free Download</span>
+    <h2 style="margin:16px 0 12px;">Try Every Feature <span class="text-gradient">Free</span></h2>
+    <p style="color:var(--text-body);max-width:460px;margin:0 auto 32px;">Download Holy Hour today and explore every feature at no cost. Premium upgrade available for the full experience.</p>
+    <a href="download.html" class="btn btn-primary" style="font-size:1.05rem;">Download Holy Hour</a>
+  </div>
+</section>
+
+<!-- ====== BLESSING ====== -->
+<div class="blessing-banner">
+  <div class="container fade-up">
+    <div class="hearts"><span>💜</span><span>❤️</span><span>💙</span></div>
+    <h2>May God Bless You and Your Family</h2>
+    <p style="color:rgba(255,255,255,0.65);margin-top:8px;">Cristo Viene Pronto — Christ is coming soon</p>
+  </div>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><span class="nav-logo-icon">🕊</span> Holy Hour</div>
+        <p>A daily companion for prayer, scripture, and spiritual growth. Bringing you closer to God, one holy hour at a time.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="download.html">Download</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="contact.html">Send a Message</a>
+        <a href="download.html">Get the App</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Holy Hour. All rights reserved.</span>
+      <span class="christ-msg">✨ Cristo Viene Pronto</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

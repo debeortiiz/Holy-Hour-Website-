@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact the Holy Hour team. We'd love to hear from you!">
+  <title>Contact — Holy Hour</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+    .contact-info-card {
+      text-align: center;
+      padding: 32px 20px;
+      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      box-shadow: 0 4px 20px rgba(108,31,201,0.06);
+    }
+    .contact-info-card .ci-icon { font-size: 2rem; margin-bottom: 12px; }
+    .contact-info-card h4 { margin-bottom: 6px; }
+    .contact-info-card p { color: var(--text-body); font-size: 0.9rem; }
+    .contact-info-card a { color: var(--purple); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-icon">🕊</span>
+      Holy Hour
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="download.html" class="btn btn-primary nav-cta" style="padding:10px 22px;font-size:0.9rem;">Get the App</a>
+    <button class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <button class="mobile-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="features.html">Features</a>
+  <a href="download.html">Download</a>
+  <a href="contact.html">Contact</a>
+  <a href="download.html" class="btn btn-primary" style="margin-top:16px;">Get the App</a>
+</div>
+
+<!-- ====== PAGE HERO ====== -->
+<section class="page-hero">
+  <div class="container">
+    <span class="badge">Get in Touch</span>
+    <h1>Contact <span class="text-gradient">Us</span></h1>
+    <p>Have a question, suggestion, or prayer request? We'd love to hear from you. Our team responds within 24 hours.</p>
+  </div>
+</section>
+
+<!-- ====== CONTACT SECTION ====== -->
+<section class="section">
+  <div class="container">
+
+    <!-- Info Cards -->
+    <div class="contact-info-grid fade-up">
+      <div class="contact-info-card">
+        <div class="ci-icon">📧</div>
+        <h4>Email Us</h4>
+        <p>General inquiries and support</p>
+        <a href="mailto:hello@holyhour.app">hello@holyhour.app</a>
+      </div>
+      <div class="contact-info-card">
+        <div class="ci-icon">🙏</div>
+        <h4>Prayer Requests</h4>
+        <p>Share your intentions with us</p>
+        <a href="mailto:pray@holyhour.app">pray@holyhour.app</a>
+      </div>
+      <div class="contact-info-card">
+        <div class="ci-icon">🛠</div>
+        <h4>Technical Support</h4>
+        <p>App issues and bug reports</p>
+        <a href="mailto:support@holyhour.app">support@holyhour.app</a>
+      </div>
+      <div class="contact-info-card">
+        <div class="ci-icon">⏱</div>
+        <h4>Response Time</h4>
+        <p>We aim to reply within</p>
+        <a>24 hours</a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form fade-up">
+      <h2 style="text-align:center;margin-bottom:8px;">Send Us a <span class="text-gradient">Message</span></h2>
+      <p style="text-align:center;color:var(--text-body);margin-bottom:32px;font-size:0.95rem;">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+      <form id="contactForm" novalidate>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Maria" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Garcia" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="maria@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a subject…</option>
+            <option>General Inquiry</option>
+            <option>Prayer Request</option>
+            <option>Technical Support</option>
+            <option>Feature Request</option>
+            <option>Partnership / Media</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Write your message here…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1rem;">
+          Send Message ✉️
+        </button>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div style="font-size:2.5rem;margin-bottom:12px;">🙏</div>
+        <h3>Message Sent!</h3>
+        <p style="color:var(--text-body);margin-top:8px;">Thank you for reaching out. We'll respond within 24 hours. May God bless you!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BLESSING ====== -->
+<div class="blessing-banner">
+  <div class="container fade-up">
+    <div class="hearts"><span>💜</span><span>❤️</span><span>💙</span></div>
+    <h2>May God Bless You and Your Family</h2>
+    <p style="color:rgba(255,255,255,0.65);margin-top:8px;">Cristo Viene Pronto — Christ is coming soon</p>
+  </div>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><span class="nav-logo-icon">🕊</span> Holy Hour</div>
+        <p>A daily companion for prayer, scripture, and spiritual growth. Bringing you closer to God, one holy hour at a time.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="download.html">Download</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="contact.html">Send a Message</a>
+        <a href="download.html">Get the App</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Holy Hour. All rights reserved.</span>
+      <span class="christ-msg">✨ Cristo Viene Pronto</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

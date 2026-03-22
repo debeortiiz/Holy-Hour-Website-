@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download Holy Hour on the App Store or Google Play. Free to download.">
+  <title>Download — Holy Hour</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .download-hero {
+      min-height: 70vh;
+      background: linear-gradient(135deg, var(--purple-dark) 0%, #260850 50%, #0a1a40 100%);
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+    .platform-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      max-width: 780px;
+      margin: 64px auto 0;
+    }
+    .platform-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 48px 36px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .platform-card:hover { transform: translateY(-8px); }
+    .platform-card .plat-icon { font-size: 4rem; margin-bottom: 20px; }
+    .platform-card h3 { margin-bottom: 8px; }
+    .platform-card p { color: var(--text-body); font-size: 0.93rem; margin-bottom: 24px; }
+    .platform-card .qr-area { display: flex; justify-content: center; margin-bottom: 24px; }
+    .platform-card .btn { width: 100%; justify-content: center; }
+    .requirements {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .req-item { text-align: center; }
+    .req-label { font-size: 0.78rem; color: var(--text-body); }
+    .req-val { font-weight: 700; font-size: 1rem; color: var(--purple); }
+    @media (max-width: 640px) {
+      .platform-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-icon">🕊</span>
+      Holy Hour
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="download.html" class="btn btn-primary nav-cta" style="padding:10px 22px;font-size:0.9rem;">Get the App</a>
+    <button class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <button class="mobile-close" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="features.html">Features</a>
+  <a href="download.html">Download</a>
+  <a href="contact.html">Contact</a>
+  <a href="download.html" class="btn btn-primary" style="margin-top:16px;">Get the App</a>
+</div>
+
+<!-- ====== DOWNLOAD HERO ====== -->
+<section class="download-hero">
+  <div class="container">
+    <span class="badge" style="background:rgba(139,61,255,0.25);color:#c084fc;">Free Download</span>
+    <h1 style="color:white;margin:16px 0 16px;">Download <span class="text-gradient">Holy Hour</span></h1>
+    <p style="color:rgba(255,255,255,0.72);max-width:520px;margin:0 auto;font-size:1.1rem;">Available for free on iOS and Android. Start your daily holy hour today and deepen your faith journey.</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:24px;color:rgba(255,255,255,0.55);font-size:0.9rem;">
+      <span>⭐⭐⭐⭐⭐</span>
+      <span>4.9 rating · 120,000+ downloads</span>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PLATFORM CARDS ====== -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="platform-cards">
+      <!-- iOS -->
+      <div class="platform-card fade-up">
+        <div class="plat-icon">🍎</div>
+        <h3>App Store</h3>
+        <p>For iPhone and iPad. Requires iOS 14 or later.</p>
+        <div class="qr-area">
+          <div class="qr-box">
+            <span class="qr-icon">▦</span>
+            <span>Scan for iOS</span>
+          </div>
+        </div>
+        <div class="requirements">
+          <div class="req-item"><div class="req-val">iOS 14+</div><div class="req-label">Minimum OS</div></div>
+          <div class="req-item"><div class="req-val">Free</div><div class="req-label">Base Price</div></div>
+          <div class="req-item"><div class="req-val">45 MB</div><div class="req-label">App Size</div></div>
+        </div>
+        <div style="margin-top:24px;">
+          <a href="#" class="btn btn-primary" onclick="this.textContent='Coming Soon!';return false;" style="display:flex;justify-content:center;gap:10px;">
+            <span>🍎</span> Download on App Store
+          </a>
+          <p style="font-size:0.75rem;color:var(--gray);margin-top:10px;text-align:center;">Coming soon to the App Store</p>
+        </div>
+      </div>
+      <!-- Android -->
+      <div class="platform-card fade-up">
+        <div class="plat-icon">🤖</div>
+        <h3>Google Play</h3>
+        <p>For Android phones and tablets. Requires Android 8 or later.</p>
+        <div class="qr-area">
+          <div class="qr-box">
+            <span class="qr-icon">▦</span>
+            <span>Scan for Android</span>
+          </div>
+        </div>
+        <div class="requirements">
+          <div class="req-item"><div class="req-val">Android 8+</div><div class="req-label">Minimum OS</div></div>
+          <div class="req-item"><div class="req-val">Free</div><div class="req-label">Base Price</div></div>
+          <div class="req-item"><div class="req-val">38 MB</div><div class="req-label">App Size</div></div>
+        </div>
+        <div style="margin-top:24px;">
+          <a href="#" class="btn btn-primary" onclick="this.textContent='Coming Soon!';return false;" style="display:flex;justify-content:center;gap:10px;">
+            <span>🤖</span> Get it on Google Play
+          </a>
+          <p style="font-size:0.75rem;color:var(--gray);margin-top:10px;text-align:center;">Coming soon to Google Play</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== WHAT'S INCLUDED ====== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="badge">What You Get</span>
+      <h2>Everything in the <span class="text-gradient">Free Version</span></h2>
+      <p>No credit card required. Start praying immediately after download.</p>
+    </div>
+    <div class="info-grid" style="margin-top:48px;">
+      <div class="info-card fade-up">
+        <div class="info-icon">📖</div>
+        <h3>Daily Scripture</h3>
+        <p>A new Bible verse and meditation every single day, forever free.</p>
+      </div>
+      <div class="info-card fade-up">
+        <div class="info-icon">🙏</div>
+        <h3>Core Prayers</h3>
+        <p>Morning offering, evening prayer, Divine Mercy, and more — all free.</p>
+      </div>
+      <div class="info-card fade-up">
+        <div class="info-icon">📿</div>
+        <h3>Full Rosary</h3>
+        <p>All 20 mysteries of the rosary, guided and free for everyone.</p>
+      </div>
+      <div class="info-card fade-up">
+        <div class="info-icon">📅</div>
+        <h3>Liturgical Calendar</h3>
+        <p>The full Catholic calendar with feast days and holy days of obligation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PREMIUM ====== -->
+<section class="section section-dark">
+  <div class="container text-center fade-up">
+    <span class="badge" style="background:rgba(168,85,247,0.25);color:#c084fc;">Premium</span>
+    <h2 style="color:white;margin:20px 0 16px;">Unlock the Full <span class="text-gradient">Experience</span></h2>
+    <p style="color:rgba(255,255,255,0.7);max-width:520px;margin:0 auto 40px;">Holy Hour Premium gives you the complete spiritual toolkit — advanced features for those who want to go deeper.</p>
+    <div class="features-grid" style="margin-top:0;text-align:left;">
+      <div class="feature-card dark fade-up">
+        <div class="feature-icon">🕯</div>
+        <h3>Holy Hour Timer</h3>
+        <p>Full structured 60-minute guided holy hour with adoration, scripture, and intercession.</p>
+      </div>
+      <div class="feature-card dark fade-up">
+        <div class="feature-icon">🎵</div>
+        <h3>Ambient Sounds</h3>
+        <p>Gregorian chant, church organ, nature sounds, and more for immersive prayer.</p>
+      </div>
+      <div class="feature-card dark fade-up">
+        <div class="feature-icon">📊</div>
+        <h3>Prayer Journal &amp; Stats</h3>
+        <p>Track your habits, streaks, and spiritual journey with beautiful insights.</p>
+      </div>
+      <div class="feature-card dark fade-up">
+        <div class="feature-icon">🫶</div>
+        <h3>Prayer Community</h3>
+        <p>Join a global community of believers sharing intentions and supporting each other.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BLESSING ====== -->
+<div class="blessing-banner">
+  <div class="container fade-up">
+    <div class="hearts"><span>💜</span><span>❤️</span><span>💙</span></div>
+    <h2>May God Bless You and Your Family</h2>
+    <p style="color:rgba(255,255,255,0.65);margin-top:8px;">Cristo Viene Pronto — Christ is coming soon</p>
+  </div>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo"><span class="nav-logo-icon">🕊</span> Holy Hour</div>
+        <p>A daily companion for prayer, scripture, and spiritual growth. Bringing you closer to God, one holy hour at a time.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="download.html">Download</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="contact.html">Send a Message</a>
+        <a href="download.html">Get the App</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Holy Hour. All rights reserved.</span>
+      <span class="christ-msg">✨ Cristo Viene Pronto</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
