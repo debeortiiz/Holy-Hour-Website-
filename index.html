@@ -4,37 +4,277 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holy Hour Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Holy Hour — Prayer, Scripture &amp; Spiritual Growth</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 90px 20px 80px;
+        }
+        .hero-icon { font-size: 3rem; margin-bottom: 16px; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 10px; line-height: 1.2; }
+        .hero .subtitle { font-size: clamp(1.1rem, 2.5vw, 1.5rem); opacity: 0.85; margin-bottom: 20px; font-style: italic; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 620px; margin: 0 auto 34px; line-height: 1.7; }
+        .hero-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+        .btn-primary {
+            background: #fff;
+            color: #3b2d8f;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.7);
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+
+        .lang-bar {
+            background: #f0eeff;
+            text-align: center;
+            padding: 12px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .lang-bar a {
+            display: inline-block;
+            margin: 3px 4px;
+            padding: 4px 10px;
+            background: #3b2d8f;
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .lang-bar a:hover { background: #1a1a6e; }
+        .lang-bar a.active { background: #6b21a8; }
+
+        .features-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 20px;
+            text-align: center;
+        }
+        .features-section h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); color: #1a1a6e; margin-bottom: 10px; }
+        .features-section .lead { color: #555; font-size: 1.05rem; max-width: 640px; margin: 0 auto 50px; line-height: 1.7; }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: #f8f6ff;
+            border: 1px solid #e0d8ff;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(59,45,143,0.12); }
+        .feature-card .icon { font-size: 2.5rem; margin-bottom: 14px; }
+        .feature-card h3 { color: #3b2d8f; font-size: 1.15rem; margin-bottom: 10px; }
+        .feature-card p { color: #555; line-height: 1.7; font-size: 0.95rem; }
+
+        .mission-section {
+            background: linear-gradient(135deg, #1a1a6e, #3b2d8f);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .mission-section .cross { font-size: 2.5rem; margin-bottom: 16px; }
+        .mission-section h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); margin-bottom: 18px; }
+        .mission-section p { font-size: 1.1rem; opacity: 0.9; max-width: 640px; margin: 0 auto 32px; line-height: 1.8; }
+        .btn-light {
+            display: inline-block;
+            background: #fff;
+            color: #3b2d8f;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.97rem;
+            transition: transform 0.2s;
+        }
+        .btn-light:hover { transform: translateY(-2px); }
+
+        .prayer-section {
+            background: #f8f6ff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .prayer-section .icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .prayer-section h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); color: #1a1a6e; margin-bottom: 16px; }
+        .prayer-section p { color: #555; font-size: 1.05rem; max-width: 560px; margin: 0 auto 32px; line-height: 1.7; }
+
+        footer {
+            background: #0f0f4a;
+            color: #aaa;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        footer a { color: #b8a9ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h1>Welcome to the Holy Hour Website</h1>
-        <p>Your number one resource for spiritual growth.</p>
-    </section>
-    <div class="language-switcher">
-        <a href="index.html">EN</a>
-        <a href="/es/index.html">ES</a>
-        <a href="/de/index.html">DE</a>
-        <a href="/it/index.html">IT</a>
-        <a href="/fr/index.html">FR</a>
-        <a href="/pt/index.html">PT</a>
-        <a href="/he/index.html">HE</a>
-        <a href="/ar/index.html">AR</a>
-        <a href="/am/index.html">AM</a>
-        <a href="/hi/index.html">HI</a>
-        <a href="/zh/index.html">ZH</a>
-        <a href="/ja/index.html">JA</a>
-        <a href="/ko/index.html">KO</a>
-        <a href="/sw/index.html">SW</a>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="features.html">Features</a>
+            <a href="download.html">Download</a>
+            <a href="churches.html">Find a Church</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
     </div>
+</nav>
+
+<div class="lang-bar">
+    <a href="index.html" class="active">EN</a>
+    <a href="es/index.html">ES</a>
+    <a href="de/index.html">DE</a>
+    <a href="it/index.html">IT</a>
+    <a href="fr/index.html">FR</a>
+    <a href="pt/index.html">PT</a>
+    <a href="he/index.html">HE</a>
+    <a href="ar/index.html">AR</a>
+    <a href="am/index.html">AM</a>
+    <a href="hi/index.html">HI</a>
+    <a href="zh/index.html">ZH</a>
+    <a href="ja/index.html">JA</a>
+    <a href="ko/index.html">KO</a>
+    <a href="sw/index.html">SW</a>
+</div>
+
+<div class="hero">
+    <div class="hero-icon">📱</div>
+    <h1>The Holy Hour App</h1>
+    <div class="subtitle">Deepen Your Faith,<br>One Holy Hour at a Time</div>
+    <p>Daily prayer, Scripture reading, and spiritual growth tools for every Christian. All denominations welcome. Cristo Viene Pronto.</p>
+    <div class="hero-btns">
+        <a href="download.html" class="btn-primary">Download the App</a>
+        <a href="contact.html" class="btn-secondary">🙏 Request Prayer</a>
+    </div>
+</div>
+
+<div class="features-section">
+    <h2>Everything You Need for Your Spiritual Walk</h2>
+    <p class="lead">Holy Hour brings the tools of faith into the palm of your hand — wherever you are, whenever you need it.</p>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="icon">🙏</div>
+            <h3>Daily Prayer</h3>
+            <p>Guided prayers and prayer prompts to help you connect with God each and every day.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📖</div>
+            <h3>Scripture Reading</h3>
+            <p>Read and meditate on God's Word with curated daily Scripture passages and devotionals.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🌱</div>
+            <h3>Spiritual Growth</h3>
+            <p>Track your spiritual journey, set goals, and grow deeper in your faith every day.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">⛪</div>
+            <h3>Find a Church</h3>
+            <p>Locate a welcoming local church in your area and connect with a community of believers.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">❤️</div>
+            <h3>Christian Fellowship</h3>
+            <p>All denominations welcome. United in Christ, growing together in love and faith.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">✉️</div>
+            <h3>Prayer Requests</h3>
+            <p>Submit a prayer request and let Deborah and our team pray over your needs personally.</p>
+        </div>
+    </div>
+</div>
+
+<div class="mission-section">
+    <div class="cross">✝</div>
+    <h2>Cristo Viene Pronto</h2>
+    <p>Christ is coming soon. Now is the time to draw near to God, to strengthen your faith, and to share the Good News with those around you. Holy Hour is here to help you do exactly that.</p>
+    <a href="about.html" class="btn-light">Learn Our Mission</a>
+</div>
+
+<div class="prayer-section">
+    <div class="icon">🙏</div>
+    <h2>Need Prayer?</h2>
+    <p>You are not alone. Send us your prayer request and Deborah will personally pray for you and your needs. We believe in the power of prayer!</p>
+    <a href="contact.html" class="btn-light" style="background:#3b2d8f;color:#fff;">Send a Prayer Request</a>
+</div>
+
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — Prayer, Scripture &amp; Spiritual Growth</p>
+    <p style="margin-top:6px;">Contact: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">Cristo Viene Pronto — All denominations welcome ✝</p>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="download.html">Download</a>
+        <a href="churches.html">Find a Church</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
