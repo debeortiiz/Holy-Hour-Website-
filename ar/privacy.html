@@ -1,17 +1,260 @@
-<h1>الخصوصية</h1> ...
-<div class="language-switcher" style="background:#f0eeff;text-align:center;padding:18px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px;">
-    <a href="../privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">EN</a>
-    <a href="../es/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ES</a>
-    <a href="../de/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">DE</a>
-    <a href="../it/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">IT</a>
-    <a href="../fr/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">FR</a>
-    <a href="../pt/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">PT</a>
-    <a href="../he/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HE</a>
-    <a href="privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;background:#3b2d8f;color:#fff;">AR</a>
-    <a href="../am/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AM</a>
-    <a href="../hi/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HI</a>
-    <a href="../zh/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ZH</a>
-    <a href="../ja/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">JA</a>
-    <a href="../ko/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">KO</a>
-    <a href="../sw/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">SW</a>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية – Holy Hour</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px 50px;
+        }
+        .page-hero h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); margin-bottom: 10px; }
+        .page-hero p { opacity: 0.85; font-size: 0.95rem; }
+
+        .content { max-width: 820px; margin: 0 auto; padding: 56px 20px; }
+
+        .last-updated {
+            background: #f8f6ff;
+            border-radius: 8px;
+            padding: 14px 18px;
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 36px;
+        }
+
+        .zero-data-banner {
+            background: #f0fdf4;
+            border: 2px solid #22c55e;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 36px;
+            text-align: center;
+        }
+        .zero-data-banner h2 {
+            color: #15803d;
+            font-size: 1.3rem;
+            margin: 0 0 8px;
+        }
+        .zero-data-banner p { color: #166534; margin: 0; }
+
+        h2 { color: #1a1a6e; font-size: 1.25rem; margin: 36px 0 12px; }
+        h3 { color: #3b2d8f; font-size: 1.05rem; margin: 20px 0 8px; }
+        p { line-height: 1.8; color: #444; margin-bottom: 14px; }
+        ul { list-style: none; padding-left: 0; margin-bottom: 14px; }
+        ul li { line-height: 1.8; color: #444; margin-bottom: 4px; }
+        a { color: #3b2d8f; }
+        a:hover { text-decoration: underline; }
+
+        .contact-box {
+            background: #f8f6ff;
+            border: 1px solid #e0d8ff;
+            border-radius: 10px;
+            padding: 24px;
+            margin-top: 36px;
+        }
+        .contact-box h3 { margin-top: 0; }
+
+        .compliance-list { list-style: none; padding-left: 0; }
+        .compliance-list li { line-height: 1.8; color: #444; margin-bottom: 4px; }
+
+        footer {
+            background: #0f0f4a;
+            color: #aaa;
+            text-align: center;
+            padding: 36px 20px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        footer a { color: #b8a9ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+    
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="../index.html">الرئيسية</a>
+            <a href="../about.html">حول</a>
+            <a href="../features.html">المميزات</a>
+            <a href="../download.html">تحميل</a>
+            <a href="../churches.html">إيجاد كنيسة</a>
+            <a href="../contact.html">اتصل بنا</a>
+            <a href="privacy.html" class="active">الخصوصية</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>سياسة الخصوصية</h1>
+    <p>Holy Hour – صفر جمع بيانات. خصوصية 100%.</p>
 </div>
+
+<div class="content">
+
+    <div class="last-updated">
+        <strong>آخر تحديث:</strong> 24 مارس 2026
+    </div>
+
+    <div class="zero-data-banner">
+        <h2>🔒 سياسة عدم جمع البيانات</h2>
+        <p><strong>Holy Hour لا يجمع أو يخزن أو ينقل أي بيانات شخصية.</strong></p>
+    </div>
+
+    <h2>1. التزامنا بخصوصيتك</h2>
+    <p>Holy Hour ("نحن") ملتزمون تمامًا بخصوصيتك. لقد صممنا تطبيقنا وموقعنا الإلكتروني بحيث لا يتم أبدًا جمع معلوماتك الشخصية أو تخزينها أو نقلها — من قبلنا أو من قبل أي شخص آخر من خلال خدمتنا.</p>
+
+    <h2>2. لا نجمع أي بيانات</h2>
+    <p>Holy Hour لا يجمع:</p>
+    <ul>
+        <li>❌ الأسماء الشخصية أو عناوين البريد الإلكتروني</li>
+        <li>❌ طلبات الصلاة أو الرسائل الشخصية</li>
+        <li>❌ معرّفات الأجهزة أو معرّفات الإعلانات</li>
+        <li>❌ التحليلات أو تقارير الأعطال أو إحصائيات الاستخدام</li>
+        <li>❌ بيانات الموقع أو إحداثيات GPS</li>
+        <li>❌ ملفات تعريف الارتباط أو أدوات التتبع أو بيانات بصمة الأصابع</li>
+        <li>❌ معلومات الحساب أو المصادقة</li>
+    </ul>
+
+    <h2>3. التخزين المحلي فقط</h2>
+    <p>يتم تخزين أي تفضيلات أو إعدادات تختارها في التطبيق حصريًا على جهازك الخاص. لا نتلقى أبدًا هذه المعلومات أو نصل إليها أو نخزنها على خوادمنا. تظل رحلتك الروحية خاصة تمامًا.</p>
+
+    <h2>4. لا خدمات من طرف ثالث</h2>
+    <p>لا يستخدم Holy Hour أي خدمات بيانات من طرف ثالث، بما في ذلك:</p>
+    <ul>
+        <li>❌ Google Analytics أو Firebase</li>
+        <li>❌ Facebook SDK أو بكسلات التتبع</li>
+        <li>❌ خدمات الإبلاغ عن الأعطال أو المراقبة</li>
+        <li>❌ شبكات الإعلانات من أي نوع</li>
+    </ul>
+
+    <h2>5. لا إعلانات، لا تتبع</h2>
+    <p>لا يحتوي Holy Hour على أي إعلانات ولا يتتبع سلوكك أو تفضيلاتك أو أنماط استخدامك بأي شكل من الأشكال.</p>
+
+    <h2>6. خصوصية الأطفال (متوافق مع COPPA)</h2>
+    <p>Holy Hour آمن للمستخدمين من جميع الأعمار، بما في ذلك الأطفال دون سن 13 عامًا. نظرًا لأننا نجمع صفر بيانات، لا توجد مخاطر تتعلق بالخصوصية للأطفال أو الأسر التي تستخدم خدمتنا.</p>
+
+    <h2>7. بياناتك آمنة دائمًا</h2>
+    <p>
+        ✅ معلوماتك تبقى على جهازك فقط<br>
+        ✅ لا نصل أبدًا إلى خوادمنا أو نخزن أي شيء عليها<br>
+        ✅ لا توجد بيانات للاختراق أو البيع أو المشاركة<br>
+        ✅ خصوصية وأمان 100%
+    </p>
+
+    <h2>8. التغييرات على هذه السياسة</h2>
+    <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. ومع ذلك، لن يتغير أبدًا التزامنا بعدم جمع البيانات. سنقوم بتحديث تاريخ "آخر تحديث" في أعلى هذه الصفحة ليعكس أي مراجعات.</p>
+
+    <h2>9. الامتثال القانوني</h2>
+    <p>تمتثل سياسة الخصوصية هذه لـ:</p>
+    <ul class="compliance-list">
+        <li>✓ COPPA (Children's Online Privacy Protection Act)</li>
+        <li>✓ GDPR (General Data Protection Regulation)</li>
+        <li>✓ CCPA (California Consumer Privacy Act)</li>
+        <li>✓ Google Play Store &amp; Apple App Store Policies</li>
+    </ul>
+
+    <div class="contact-box">
+        <h3>10. أسئلة؟</h3>
+        <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه أو ممارسات عدم جمع البيانات لدينا، يرجى التواصل معنا:</p>
+        <p><strong>Holy Hour – فريق الخصوصية</strong><br>
+        Email: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    </div>
+
+</div>
+
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — الصلاة والكتاب المقدس والنمو الروحي</p>
+    <p style="margin-top:6px;">Contact: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">Cristo Viene Pronto — جميع الطوائف مرحب بها ✝</p>
+    <div class="footer-links">
+        <a href="../index.html">الرئيسية</a>
+        <a href="../about.html">حول</a>
+        <a href="../features.html">المميزات</a>
+        <a href="../download.html">تحميل</a>
+        <a href="../churches.html">إيجاد كنيسة</a>
+        <a href="../contact.html">اتصل بنا</a>
+        <a href="privacy.html">الخصوصية</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2026 Holy Hour. جميع الحقوق محفوظة.</p>
+<div class="language-switcher">
+    <a href="../privacy.html">EN</a>
+    <a href="../es/privacy.html">ES</a>
+    <a href="../de/privacy.html">DE</a>
+    <a href="../it/privacy.html">IT</a>
+    <a href="../fr/privacy.html">FR</a>
+    <a href="../pt/privacy.html">PT</a>
+    <a href="../he/privacy.html">HE</a>
+    <a href="privacy.html" class="active">AR</a>
+    <a href="../am/privacy.html">AM</a>
+    <a href="../hi/privacy.html">HI</a>
+    <a href="../zh/privacy.html">ZH</a>
+    <a href="../ja/privacy.html">JA</a>
+    <a href="../ko/privacy.html">KO</a>
+    <a href="../sw/privacy.html">SW</a>
+</div>
+</footer>
+
+</body>
+</html>
