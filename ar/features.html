@@ -1,1 +1,281 @@
-<h1>الميزات</h1> ... 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الميزات – Holy Hour</title>
+    <style>
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; direction: rtl; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 90px 20px 80px;
+        }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 18px; }
+        .hero p { font-size: 1.15rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            background: #fff;
+            color: #3b2d8f;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.7);
+            padding: 11px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+        .features {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+        }
+        .feature-card {
+            background: #f8f6ff;
+            border-right: 5px solid #3b2d8f;
+            border-left: none;
+            border-radius: 8px;
+            padding: 28px 24px;
+        }
+        .feature-card .icon { font-size: 2rem; margin-bottom: 12px; }
+        .feature-card h3 { color: #3b2d8f; font-size: 1.15rem; margin-bottom: 10px; }
+        .feature-card p { color: #555; line-height: 1.7; font-size: 0.95rem; }
+
+        .cta-section {
+            background: linear-gradient(135deg, #3b2d8f, #6b21a8);
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px;
+        }
+        .cta-section h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; }
+        .cta-section p { font-size: 1.05rem; opacity: 0.9; max-width: 520px; margin: 0 auto 28px; line-height: 1.7; }
+
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+    
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="../about.html">حول</a>
+            <a href="../features.html" class="active">الميزات</a>
+            <a href="../download.html">تحميل</a>
+            <a href="../churches.html">ابحث عن كنيسة</a>
+            <a href="../contact.html">تواصل</a>
+            <a href="../privacy.html">الخصوصية</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>App Features</h1>
+    <p>Everything you need to grow in faith, build a prayer life, and stay connected to God's Word — all in one place.</p>
+</div>
+
+<div class="content">
+
+    <h2 class="section-title">What Holy Hour Offers</h2>
+    <p class="section-sub">Designed for believers of all backgrounds, Holy Hour gives you the tools to make every day a day of faith.</p>
+
+    <div class="feature-row">
+        <div class="feature-visual">🙏</div>
+        <div class="feature-text">
+            <h2>Daily Prayer &amp; Devotion</h2>
+            <p>Start every day with purpose. Holy Hour guides you through structured prayer times, morning devotionals, and evening reflections designed to help you build a consistent, powerful prayer life.</p>
+            <ul>
+                <li>Morning and evening prayer prompts</li>
+                <li>Guided intercessory prayer</li>
+                <li>Personal prayer journaling</li>
+                <li>Prayer reminders and streaks</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feature-row reverse">
+        <div class="feature-visual">📖</div>
+        <div class="feature-text">
+            <h2>Scripture Reading</h2>
+            <p>Dive deeper into God's Word with daily Scripture readings, verse highlights, and thematic Bible study plans. God's Word is living and active — let it speak to you every day.</p>
+            <ul>
+                <li>Daily verse of the day</li>
+                <li>Reading plans and devotional series</li>
+                <li>Verse highlighting and notes</li>
+                <li>Search and bookmarking</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feature-row">
+        <div class="feature-visual">🌱</div>
+        <div class="feature-text">
+            <h2>Spiritual Growth Tools</h2>
+            <p>Track your spiritual journey and celebrate your growth. Holy Hour helps you set faith goals, monitor your consistency, and reflect on how far God has brought you.</p>
+            <ul>
+                <li>Faith goal setting</li>
+                <li>Spiritual journey timeline</li>
+                <li>Gratitude and reflection prompts</li>
+                <li>Progress tracking and milestones</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feature-row reverse">
+        <div class="feature-visual">⛪</div>
+        <div class="feature-text">
+            <h2>Find a Church</h2>
+            <p>No one should walk this faith journey alone. Holy Hour helps you find a local church where you can worship, grow, and connect with other believers in your community.</p>
+            <ul>
+                <li>Church directory by location</li>
+                <li>Service times and contact info</li>
+                <li>Multiple denominations listed</li>
+                <li>Easy-to-use map integration</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feature-row">
+        <div class="feature-visual">✉️</div>
+        <div class="feature-text">
+            <h2>Prayer Requests</h2>
+            <p>Submit your prayer needs directly to Deborah and the Holy Hour prayer team. We believe in the power of intercessory prayer, and we are honored to stand with you before the Lord.</p>
+            <ul>
+                <li>Submit prayer requests anytime</li>
+                <li>Personal prayer by Deborah</li>
+                <li>Confidential and compassionate</li>
+                <li>Direct email response available</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="all-welcome">
+        <h2>✝ All Denominations Welcome</h2>
+        <p>Holy Hour is for every believer in Jesus Christ. Whether you are Baptist, Pentecostal, Methodist, Presbyterian, non-denominational, or any other tradition — you are welcome here. We are united by our love for Christ.</p>
+        <div class="denoms">
+            <span class="denom-tag">Baptist</span>
+            <span class="denom-tag">Pentecostal</span>
+            <span class="denom-tag">Methodist</span>
+            <span class="denom-tag">Presbyterian</span>
+            <span class="denom-tag">Non-Denominational</span>
+            <span class="denom-tag">Evangelical</span>
+            <span class="denom-tag">Lutheran</span>
+            <span class="denom-tag">Anglican</span>
+            <span class="denom-tag">And More!</span>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:48px;">
+        <h2 style="color:#1a1a6e; margin-bottom:14px;">Ready to Start Your Holy Hour?</h2>
+        <p style="color:#555; margin-bottom:24px; line-height:1.7;">Download the app today and begin your journey of deeper faith, prayer, and spiritual growth.</p>
+        <a href="../download.html" class="btn" style="background:#3b2d8f;color:#fff;">Download Now</a>
+    </div>
+
+</div>
+
+
+<div class="language-switcher">
+    <a href="../features.html">EN</a>
+    <a href="../es/features.html">ES</a>
+    <a href="../de/features.html">DE</a>
+    <a href="../it/features.html">IT</a>
+    <a href="../fr/features.html">FR</a>
+    <a href="../pt/features.html">PT</a>
+    <a href="../he/features.html">HE</a>
+    <a href="features.html" class="active">AR</a>
+    <a href="../am/features.html">AM</a>
+    <a href="../hi/features.html">HI</a>
+    <a href="../zh/features.html">ZH</a>
+    <a href="../ja/features.html">JA</a>
+    <a href="../ko/features.html">KO</a>
+    <a href="../sw/features.html">SW</a>
+</div>
+
+<footer>
+    &copy; 2025 Holy Hour. جميع الحقوق محفوظة. &nbsp;|&nbsp;
+    <a href="../privacy.html" style="color:#888;">سياسة الخصوصية</a>
+</footer>
+
+</body>
+</html>

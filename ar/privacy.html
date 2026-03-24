@@ -1,1 +1,255 @@
-<h1>الخصوصية</h1> ... 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخصوصية – Holy Hour</title>
+    <style>
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; direction: rtl; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 90px 20px 80px;
+        }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 18px; }
+        .hero p { font-size: 1.15rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            background: #fff;
+            color: #3b2d8f;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.7);
+            padding: 11px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+        .features {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+        }
+        .feature-card {
+            background: #f8f6ff;
+            border-right: 5px solid #3b2d8f;
+            border-left: none;
+            border-radius: 8px;
+            padding: 28px 24px;
+        }
+        .feature-card .icon { font-size: 2rem; margin-bottom: 12px; }
+        .feature-card h3 { color: #3b2d8f; font-size: 1.15rem; margin-bottom: 10px; }
+        .feature-card p { color: #555; line-height: 1.7; font-size: 0.95rem; }
+
+        .cta-section {
+            background: linear-gradient(135deg, #3b2d8f, #6b21a8);
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px;
+        }
+        .cta-section h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; }
+        .cta-section p { font-size: 1.05rem; opacity: 0.9; max-width: 520px; margin: 0 auto 28px; line-height: 1.7; }
+
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+    
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="../about.html">حول</a>
+            <a href="../features.html">الميزات</a>
+            <a href="../download.html">تحميل</a>
+            <a href="../churches.html">ابحث عن كنيسة</a>
+            <a href="../contact.html">تواصل</a>
+            <a href="../privacy.html" class="active">الخصوصية</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>Privacy Policy</h1>
+    <p>Holy Hour – Zero data collection. 100% private.</p>
+</div>
+
+<div class="content">
+
+    <div class="last-updated">
+        <strong>Last Updated:</strong> March 24, 2026
+    </div>
+
+    <div class="zero-data-banner">
+        <h2>🔒 ZERO DATA COLLECTION POLICY</h2>
+        <p><strong>Holy Hour does NOT collect, store, or transmit any personal data.</strong></p>
+    </div>
+
+    <h2>1. Our Commitment to Your Privacy</h2>
+    <p>Holy Hour ("we," "us," or "our") is fully committed to your privacy. We have designed our app and website so that your personal information is never collected, stored, or transmitted — by us or anyone else through our Service.</p>
+
+    <h2>2. We Do NOT Collect Any Data</h2>
+    <p>Holy Hour does <strong>not</strong> collect:</p>
+    <ul>
+        <li>❌ Personal names or email addresses</li>
+        <li>❌ Prayer requests or personal messages</li>
+        <li>❌ Device identifiers or advertising IDs</li>
+        <li>❌ Analytics, crash reports, or usage statistics</li>
+        <li>❌ Location data or GPS coordinates</li>
+        <li>❌ Cookies, trackers, or fingerprinting data</li>
+        <li>❌ Account or authentication information</li>
+    </ul>
+
+    <h2>3. Local Storage Only</h2>
+    <p>Any preferences or settings you choose within the app are stored exclusively on <strong>your own device</strong>. We never receive, access, or store any of this information on our servers. Your spiritual journey remains entirely private.</p>
+
+    <h2>4. No Third-Party Services</h2>
+    <p>We do <strong>not</strong> use any third-party data services, including:</p>
+    <ul>
+        <li>❌ Google Analytics or Firebase</li>
+        <li>❌ Facebook SDK or tracking pixels</li>
+        <li>❌ Crash reporting or monitoring services</li>
+        <li>❌ Advertising networks of any kind</li>
+    </ul>
+
+    <h2>5. No Ads, No Tracking</h2>
+    <p>Holy Hour contains <strong>no advertisements</strong> and does <strong>not</strong> track your behavior, preferences, or usage patterns in any way.</p>
+
+    <h2>6. Children's Privacy (COPPA Compliant)</h2>
+    <p>Holy Hour is safe for users of all ages, including children under 13. Because we collect <strong>zero data</strong>, there are no privacy risks for children or families using our Service.</p>
+
+    <h2>7. Your Data Is Always Safe</h2>
+    <p>
+        ✅ Your information stays on your device only<br>
+        ✅ We never access or store anything on our servers<br>
+        ✅ No data to be hacked, sold, or shared<br>
+        ✅ 100% private and secure
+    </p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. However, our commitment to <strong>zero data collection</strong> will never change. We will update the "Last Updated" date at the top of this page to reflect any revisions.</p>
+
+    <h2>9. Legal Compliance</h2>
+    <p>This privacy policy complies with:</p>
+    <ul class="compliance-list">
+        <li>✓ COPPA (Children's Online Privacy Protection Act)</li>
+        <li>✓ GDPR (General Data Protection Regulation)</li>
+        <li>✓ CCPA (California Consumer Privacy Act)</li>
+        <li>✓ Google Play Store &amp; Apple App Store Policies</li>
+    </ul>
+
+    <div class="contact-box">
+        <h3>10. Questions?</h3>
+        <p>If you have any questions about this Privacy Policy or our zero data collection practices, please contact us:</p>
+        <p><strong>Holy Hour – Privacy Team</strong><br>
+        Email: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    </div>
+
+</div>
+
+
+<div class="language-switcher">
+    <a href="../privacy.html">EN</a>
+    <a href="../es/privacy.html">ES</a>
+    <a href="../de/privacy.html">DE</a>
+    <a href="../it/privacy.html">IT</a>
+    <a href="../fr/privacy.html">FR</a>
+    <a href="../pt/privacy.html">PT</a>
+    <a href="../he/privacy.html">HE</a>
+    <a href="privacy.html" class="active">AR</a>
+    <a href="../am/privacy.html">AM</a>
+    <a href="../hi/privacy.html">HI</a>
+    <a href="../zh/privacy.html">ZH</a>
+    <a href="../ja/privacy.html">JA</a>
+    <a href="../ko/privacy.html">KO</a>
+    <a href="../sw/privacy.html">SW</a>
+</div>
+
+<footer>
+    &copy; 2025 Holy Hour. جميع الحقوق محفوظة. &nbsp;|&nbsp;
+    <a href="../privacy.html" style="color:#888;">سياسة الخصوصية</a>
+</footer>
+
+</body>
+</html>

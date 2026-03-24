@@ -1,1 +1,235 @@
-<h1>معلومات عنا</h1> ... 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معلومات عنا – Holy Hour</title>
+    <style>
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; direction: rtl; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 90px 20px 80px;
+        }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 18px; }
+        .hero p { font-size: 1.15rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            background: #fff;
+            color: #3b2d8f;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.7);
+            padding: 11px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+        .features {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+        }
+        .feature-card {
+            background: #f8f6ff;
+            border-right: 5px solid #3b2d8f;
+            border-left: none;
+            border-radius: 8px;
+            padding: 28px 24px;
+        }
+        .feature-card .icon { font-size: 2rem; margin-bottom: 12px; }
+        .feature-card h3 { color: #3b2d8f; font-size: 1.15rem; margin-bottom: 10px; }
+        .feature-card p { color: #555; line-height: 1.7; font-size: 0.95rem; }
+
+        .cta-section {
+            background: linear-gradient(135deg, #3b2d8f, #6b21a8);
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px;
+        }
+        .cta-section h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; }
+        .cta-section p { font-size: 1.05rem; opacity: 0.9; max-width: 520px; margin: 0 auto 28px; line-height: 1.7; }
+
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+    
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="../about.html">حول</a>
+            <a href="../features.html">الميزات</a>
+            <a href="../download.html">تحميل</a>
+            <a href="../churches.html">ابحث عن كنيسة</a>
+            <a href="../contact.html">تواصل</a>
+            <a href="../privacy.html">الخصوصية</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>About Holy Hour</h1>
+    <p>Our mission is to help every believer draw closer to God through prayer, Scripture, and spiritual community.</p>
+</div>
+
+<div class="content">
+
+    <div class="card">
+        <h2>✝ Our Mission</h2>
+        <p>Holy Hour was created to give every Christian a simple, beautiful space to spend dedicated time with God. Whether you have five minutes or a full hour, our app guides you through prayer, Scripture reading, and spiritual reflection.</p>
+        <p>We believe that consistent time in God's presence transforms hearts, families, and communities. Cristo Viene Pronto — Christ is coming soon — and we want to help as many people as possible be ready to meet Him.</p>
+    </div>
+
+    <div class="card">
+        <h2>🌍 Our Vision</h2>
+        <p>We envision a global Christian community — united across all denominations — that prioritizes prayer and the Word of God. Holy Hour is a tool for every believer, regardless of their background, tradition, or church affiliation.</p>
+        <p>We are <strong>not denominational</strong>. We welcome Baptists, Pentecostals, Methodists, non-denominational believers, and everyone in between. If you love Jesus, you are welcome here.</p>
+    </div>
+
+    <div class="card">
+        <h2>🙏 Deborah would love to pray for you!</h2>
+        <p>Deborah would love to pray for you! Holy Hour was founded by Deborah, However she was a vessel that God used to make the app possible through her! She knows that the architect of the app is Yeshua, Adonai and the Holy Spirit. The full credit is theirs! Deborah is a passionate servant of Christ whose heart is to intercede for others. Through this platform, She invites you to submit your prayer requests so that she can personally pray over your needs.</p>
+        <p>No request is too big or too small. You are loved, you are seen, and you are prayed for. Reach out anytime at <a href="mailto:cristovieneprontobydeborah@gmail.com" style="color:#3b2d8f;">cristovieneprontobydeborah@gmail.com</a>.</p>
+    </div>
+
+    <h2 style="color:#1a1a6e; text-align:center; margin-bottom:6px;">Our Core Values</h2>
+    <p style="text-align:center; color:#666; margin-bottom:0;">What guides everything we do</p>
+    <div class="values-grid">
+        <div class="value-item">
+            <div class="icon">🙏</div>
+            <h3>Prayer First</h3>
+            <p>Everything begins and ends with prayer. We believe prayer changes things.</p>
+        </div>
+        <div class="value-item">
+            <div class="icon">📖</div>
+            <h3>Scripture</h3>
+            <p>God's Word is our foundation. We anchor every feature in Biblical truth.</p>
+        </div>
+        <div class="value-item">
+            <div class="icon">❤️</div>
+            <h3>Unity</h3>
+            <p>All denominations are welcome. We are one body in Christ.</p>
+        </div>
+        <div class="value-item">
+            <div class="icon">🌱</div>
+            <h3>Growth</h3>
+            <p>We are committed to helping every believer grow deeper in faith.</p>
+        </div>
+    </div>
+
+    <div class="cta-box">
+        <h3>🙏 Need Someone to Pray for You?</h3>
+        <p>Deborah and the Holy Hour team are here to pray for you. Submit your prayer request today — we would be honored to lift you up to the Lord.</p>
+        <a href="../contact.html" class="btn">Send a Prayer Request</a>
+    </div>
+
+</div>
+
+
+<div class="language-switcher">
+    <a href="../about.html">EN</a>
+    <a href="../es/about.html">ES</a>
+    <a href="../de/about.html">DE</a>
+    <a href="../it/about.html">IT</a>
+    <a href="../fr/about.html">FR</a>
+    <a href="../pt/about.html">PT</a>
+    <a href="../he/about.html">HE</a>
+    <a href="about.html" class="active">AR</a>
+    <a href="../am/about.html">AM</a>
+    <a href="../hi/about.html">HI</a>
+    <a href="../zh/about.html">ZH</a>
+    <a href="../ja/about.html">JA</a>
+    <a href="../ko/about.html">KO</a>
+    <a href="../sw/about.html">SW</a>
+</div>
+
+<footer>
+    &copy; 2025 Holy Hour. جميع الحقوق محفوظة. &nbsp;|&nbsp;
+    <a href="../privacy.html" style="color:#888;">سياسة الخصوصية</a>
+</footer>
+
+</body>
+</html>
