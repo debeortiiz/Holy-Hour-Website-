@@ -1,17 +1,260 @@
-<h1>Faragha</h1> ...
-<div class="language-switcher" style="background:#f0eeff;text-align:center;padding:18px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px;">
-    <a href="../privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">EN</a>
-    <a href="../es/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ES</a>
-    <a href="../de/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">DE</a>
-    <a href="../it/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">IT</a>
-    <a href="../fr/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">FR</a>
-    <a href="../pt/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">PT</a>
-    <a href="../he/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HE</a>
-    <a href="../ar/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AR</a>
-    <a href="../am/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AM</a>
-    <a href="../hi/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HI</a>
-    <a href="../zh/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ZH</a>
-    <a href="../ja/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">JA</a>
-    <a href="../ko/privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">KO</a>
-    <a href="privacy.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;background:#3b2d8f;color:#fff;">SW</a>
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sera ya Faragha – Holy Hour</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px 50px;
+        }
+        .page-hero h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); margin-bottom: 10px; }
+        .page-hero p { opacity: 0.85; font-size: 0.95rem; }
+
+        .content { max-width: 820px; margin: 0 auto; padding: 56px 20px; }
+
+        .last-updated {
+            background: #f8f6ff;
+            border-radius: 8px;
+            padding: 14px 18px;
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 36px;
+        }
+
+        .zero-data-banner {
+            background: #f0fdf4;
+            border: 2px solid #22c55e;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 36px;
+            text-align: center;
+        }
+        .zero-data-banner h2 {
+            color: #15803d;
+            font-size: 1.3rem;
+            margin: 0 0 8px;
+        }
+        .zero-data-banner p { color: #166534; margin: 0; }
+
+        h2 { color: #1a1a6e; font-size: 1.25rem; margin: 36px 0 12px; }
+        h3 { color: #3b2d8f; font-size: 1.05rem; margin: 20px 0 8px; }
+        p { line-height: 1.8; color: #444; margin-bottom: 14px; }
+        ul { list-style: none; padding-left: 0; margin-bottom: 14px; }
+        ul li { line-height: 1.8; color: #444; margin-bottom: 4px; }
+        a { color: #3b2d8f; }
+        a:hover { text-decoration: underline; }
+
+        .contact-box {
+            background: #f8f6ff;
+            border: 1px solid #e0d8ff;
+            border-radius: 10px;
+            padding: 24px;
+            margin-top: 36px;
+        }
+        .contact-box h3 { margin-top: 0; }
+
+        .compliance-list { list-style: none; padding-left: 0; }
+        .compliance-list li { line-height: 1.8; color: #444; margin-bottom: 4px; }
+
+        footer {
+            background: #0f0f4a;
+            color: #aaa;
+            text-align: center;
+            padding: 36px 20px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        footer a { color: #b8a9ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+    
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="../index.html">Nyumbani</a>
+            <a href="../about.html">Kuhusu</a>
+            <a href="../features.html">Vipengele</a>
+            <a href="../download.html">Pakua</a>
+            <a href="../churches.html">Pata Kanisa</a>
+            <a href="../contact.html">Wasiliana</a>
+            <a href="privacy.html" class="active">Faragha</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>Sera ya Faragha</h1>
+    <p>Holy Hour – Ukusanyaji data sifuri. 100% ya faragha.</p>
 </div>
+
+<div class="content">
+
+    <div class="last-updated">
+        <strong>Ilisasishwa Mara ya Mwisho:</strong> Machi 24, 2026
+    </div>
+
+    <div class="zero-data-banner">
+        <h2>🔒 SERA YA UKUSANYAJI DATA SIFURI</h2>
+        <p><strong>Holy Hour HAIKUSANYI, haihifadhi, wala haisambazi data yoyote ya kibinafsi.</strong></p>
+    </div>
+
+    <h2>1. Ahadi Yetu kwa Faragha Yako</h2>
+    <p>Holy Hour ("sisi") imejitolea kikamilifu kwa faragha yako. Tumeunda programu yetu na tovuti ili taarifa zako za kibinafsi hazikusanyiwi, kuhifadhiwa, au kusambazwa kamwe — na sisi au mtu mwingine yeyote kupitia Huduma yetu.</p>
+
+    <h2>2. Hatukusanyi Data Yoyote</h2>
+    <p>Holy Hour haikisanyi:</p>
+    <ul>
+        <li>❌ Majina ya kibinafsi au anwani za barua pepe</li>
+        <li>❌ Maombi ya sala au ujumbe wa kibinafsi</li>
+        <li>❌ Vitambulisho vya kifaa au vitambulisho vya matangazo</li>
+        <li>❌ Uchambuzi, ripoti za kuanguka, au takwimu za matumizi</li>
+        <li>❌ Data ya eneo au kuratibu za GPS</li>
+        <li>❌ Vidakuzi, vifuatiliaji, au data ya alama za vidole</li>
+        <li>❌ Taarifa za akaunti au uthibitisho</li>
+    </ul>
+
+    <h2>3. Uhifadhi wa Ndani Tu</h2>
+    <p>Mapendeleo yoyote au mipangilio unayochagua ndani ya programu huhifadhiwa peke yake kwenye kifaa chako mwenyewe. Hatupokei, kufikia, au kuhifadhi taarifa hizi kwenye seva zetu kamwe. Safari yako ya kiroho inabaki kuwa ya faragha kabisa.</p>
+
+    <h2>4. Hakuna Huduma za Wahusika Wengine</h2>
+    <p>Holy Hour haitumii huduma yoyote ya data ya wahusika wengine, ikijumuisha:</p>
+    <ul>
+        <li>❌ Google Analytics au Firebase</li>
+        <li>❌ Facebook SDK au vipande vya kufuatilia</li>
+        <li>❌ Huduma za kuripoti kuanguka au ufuatiliaji</li>
+        <li>❌ Mtandao wowote wa matangazo wa aina yoyote</li>
+    </ul>
+
+    <h2>5. Hakuna Matangazo, Hakuna Ufuatiliaji</h2>
+    <p>Holy Hour haina matangazo yoyote na haifuatilii tabia yako, mapendeleo, au mifumo ya matumizi kwa njia yoyote.</p>
+
+    <h2>6. Faragha ya Watoto (Inafuata COPPA)</h2>
+    <p>Holy Hour ni salama kwa watumiaji wa umri wote, ikijumuisha watoto chini ya miaka 13. Kwa sababu tunakusanya data sifuri, hakuna hatari za faragha kwa watoto au familia zinazotumia Huduma yetu.</p>
+
+    <h2>7. Data Yako Iko Salama Kila Wakati</h2>
+    <p>
+        ✅ Taarifa zako zinabaki kwenye kifaa chako peke yake<br>
+        ✅ Hatufikii au kuhifadhi chochote kwenye seva zetu kamwe<br>
+        ✅ Hakuna data ya kudukuliwa, kuuzwa, au kushirikiwa<br>
+        ✅ 100% ya faragha na salama
+    </p>
+
+    <h2>8. Mabadiliko ya Sera Hii</h2>
+    <p>Tunaweza kusasisha Sera hii ya Faragha mara kwa mara. Hata hivyo, ahadi yetu ya ukusanyaji data sifuri haitabadilika kamwe. Tutasasisha tarehe ya "Ilisasishwa Mara ya Mwisho" juu ya ukurasa huu ili kuonyesha marekebisho yoyote.</p>
+
+    <h2>9. Uzingatiaji wa Kisheria</h2>
+    <p>Sera hii ya faragha inafuata:</p>
+    <ul class="compliance-list">
+        <li>✓ COPPA (Children's Online Privacy Protection Act)</li>
+        <li>✓ GDPR (General Data Protection Regulation)</li>
+        <li>✓ CCPA (California Consumer Privacy Act)</li>
+        <li>✓ Google Play Store &amp; Apple App Store Policies</li>
+    </ul>
+
+    <div class="contact-box">
+        <h3>10. Maswali?</h3>
+        <p>Ikiwa una maswali yoyote kuhusu Sera hii ya Faragha au desturi zetu za ukusanyaji data sifuri, tafadhali wasiliana nasi:</p>
+        <p><strong>Holy Hour – Timu ya Faragha</strong><br>
+        Email: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    </div>
+
+</div>
+
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — Sala, Maandiko na Ukuaji wa Kiroho</p>
+    <p style="margin-top:6px;">Contact: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">Cristo Viene Pronto — Madhehebu yote yanakaribishwa ✝</p>
+    <div class="footer-links">
+        <a href="../index.html">Nyumbani</a>
+        <a href="../about.html">Kuhusu</a>
+        <a href="../features.html">Vipengele</a>
+        <a href="../download.html">Pakua</a>
+        <a href="../churches.html">Pata Kanisa</a>
+        <a href="../contact.html">Wasiliana</a>
+        <a href="privacy.html">Faragha</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2026 Holy Hour. Haki zote zimehifadhiwa.</p>
+<div class="language-switcher">
+    <a href="../privacy.html">EN</a>
+    <a href="../es/privacy.html">ES</a>
+    <a href="../de/privacy.html">DE</a>
+    <a href="../it/privacy.html">IT</a>
+    <a href="../fr/privacy.html">FR</a>
+    <a href="../pt/privacy.html">PT</a>
+    <a href="../he/privacy.html">HE</a>
+    <a href="../ar/privacy.html">AR</a>
+    <a href="../am/privacy.html">AM</a>
+    <a href="../hi/privacy.html">HI</a>
+    <a href="../zh/privacy.html">ZH</a>
+    <a href="../ja/privacy.html">JA</a>
+    <a href="../ko/privacy.html">KO</a>
+    <a href="privacy.html" class="active">SW</a>
+</div>
+</footer>
+
+</body>
+</html>
