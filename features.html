@@ -134,6 +134,30 @@
             .feature-row, .feature-row.reverse { flex-direction: column; }
             .feature-visual { flex: 0 0 120px; height: 120px; font-size: 3rem; width: 100%; }
         }
+    
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -273,6 +297,22 @@
 
     </div>
     <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. All rights reserved.</p>
+<div class="language-switcher">
+    <a href="features.html" class="active">EN</a>
+    <a href="es/features.html">ES</a>
+    <a href="de/features.html">DE</a>
+    <a href="it/features.html">IT</a>
+    <a href="fr/features.html">FR</a>
+    <a href="pt/features.html">PT</a>
+    <a href="he/features.html">HE</a>
+    <a href="ar/features.html">AR</a>
+    <a href="am/features.html">AM</a>
+    <a href="hi/features.html">HI</a>
+    <a href="zh/features.html">ZH</a>
+    <a href="ja/features.html">JA</a>
+    <a href="ko/features.html">KO</a>
+    <a href="sw/features.html">SW</a>
+</div>
 </footer>
 
 </body>

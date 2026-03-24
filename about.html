@@ -110,6 +110,30 @@
         footer a { color: #b8a9ff; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
         footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+    
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -203,6 +227,22 @@
 
     </div>
     <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. All rights reserved.</p>
+<div class="language-switcher">
+    <a href="about.html" class="active">EN</a>
+    <a href="es/about.html">ES</a>
+    <a href="de/about.html">DE</a>
+    <a href="it/about.html">IT</a>
+    <a href="fr/about.html">FR</a>
+    <a href="pt/about.html">PT</a>
+    <a href="he/about.html">HE</a>
+    <a href="ar/about.html">AR</a>
+    <a href="am/about.html">AM</a>
+    <a href="hi/about.html">HI</a>
+    <a href="zh/about.html">ZH</a>
+    <a href="ja/about.html">JA</a>
+    <a href="ko/about.html">KO</a>
+    <a href="sw/about.html">SW</a>
+</div>
 </footer>
 
 </body>
