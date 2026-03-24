@@ -1,1 +1,250 @@
-<h1>التواصل</h1> ... 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التواصل – Holy Hour</title>
+    <style>
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; direction: rtl; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 90px 20px 80px;
+        }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 18px; }
+        .hero p { font-size: 1.15rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            background: #fff;
+            color: #3b2d8f;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.7);
+            padding: 11px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+        .features {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 70px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+        }
+        .feature-card {
+            background: #f8f6ff;
+            border-right: 5px solid #3b2d8f;
+            border-left: none;
+            border-radius: 8px;
+            padding: 28px 24px;
+        }
+        .feature-card .icon { font-size: 2rem; margin-bottom: 12px; }
+        .feature-card h3 { color: #3b2d8f; font-size: 1.15rem; margin-bottom: 10px; }
+        .feature-card p { color: #555; line-height: 1.7; font-size: 0.95rem; }
+
+        .cta-section {
+            background: linear-gradient(135deg, #3b2d8f, #6b21a8);
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px;
+        }
+        .cta-section h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; }
+        .cta-section p { font-size: 1.05rem; opacity: 0.9; max-width: 520px; margin: 0 auto 28px; line-height: 1.7; }
+
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+    
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="../about.html">حول</a>
+            <a href="../features.html">الميزات</a>
+            <a href="../download.html">تحميل</a>
+            <a href="../churches.html">ابحث عن كنيسة</a>
+            <a href="../contact.html">تواصل</a>
+            <a href="../privacy.html">الخصوصية</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>Contact &amp; Prayer Requests</h1>
+    <p>Feel free to request prayers — we are here to pray for you. No request is too big or too small.</p>
+</div>
+
+<div class="content">
+    <div class="contact-grid">
+
+        <!-- Prayer Request Form -->
+        <div class="form-section">
+            <h2>🙏 Submit a Prayer Request</h2>
+            <p class="form-intro">Deborah would be honored to pray for you. Fill out the form below and she will personally lift your request before the Lord. You are loved!</p>
+
+            <form id="prayer-form" onsubmit="handleSubmit(event)">
+
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prayer">Your Prayer Request *</label>
+                    <textarea id="prayer" name="prayer" placeholder="Share your prayer request here. God hears every word, and so does Deborah. ✝" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">🙏 Send Prayer Request</button>
+                <p class="form-note">Your information is kept confidential. By submitting, you agree to our <a href="../privacy.html" style="color:#3b2d8f;">Privacy Policy</a>.</p>
+            </form>
+
+            <div id="success-message">
+                <strong>🙏 Thank you! Your prayer request has been received.</strong><br>
+                Deborah will personally pray for you. God bless you! ✝
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+
+            <div class="contact-card">
+                <div class="ci-icon">📧</div>
+                <h3>Email Us</h3>
+                <p>For prayer requests, questions, or feedback:<br>
+                <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+            </div>
+
+            <div class="contact-card">
+                <div class="ci-icon">📱</div>
+                <h3>Download the App</h3>
+                <p>Submit prayer requests and access all features through the Holy Hour app. Available on <a href="../download.html">iOS and Android</a>.</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="ci-icon">⛪</div>
+                <h3>Find a Church</h3>
+                <p>Looking for a local church? We can help you find a welcoming congregation near you. <a href="../churches.html">View our church directory</a>.</p>
+            </div>
+
+            <div class="prayer-promise">
+                <div class="pp-icon">✝</div>
+                <p><strong>Deborah personally prays over every request submitted through Holy Hour.</strong> You are not alone in your journey. The Lord hears you, and so do we.</p>
+                <p class="verse">"Is anyone among you in trouble? Let them pray." — James 5:13</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="language-switcher">
+    <a href="../contact.html">EN</a>
+    <a href="../es/contact.html">ES</a>
+    <a href="../de/contact.html">DE</a>
+    <a href="../it/contact.html">IT</a>
+    <a href="../fr/contact.html">FR</a>
+    <a href="../pt/contact.html">PT</a>
+    <a href="../he/contact.html">HE</a>
+    <a href="contact.html" class="active">AR</a>
+    <a href="../am/contact.html">AM</a>
+    <a href="../hi/contact.html">HI</a>
+    <a href="../zh/contact.html">ZH</a>
+    <a href="../ja/contact.html">JA</a>
+    <a href="../ko/contact.html">KO</a>
+    <a href="../sw/contact.html">SW</a>
+</div>
+
+<footer>
+    &copy; 2025 Holy Hour. جميع الحقوق محفوظة. &nbsp;|&nbsp;
+    <a href="../privacy.html" style="color:#888;">سياسة الخصوصية</a>
+</footer>
+
+</body>
+</html>
