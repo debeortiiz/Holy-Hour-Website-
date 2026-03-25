@@ -1,72 +1,86 @@
-margin-top:20px;">
-    <a href="../contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:60
-    <a href="contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;background:#3b2d8f;color:#fff;">ES</a>
-    <a href="../de/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">DE</a>
-    <a href="../it/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">IT</a>
-    <a href="../fr/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">FR</a>
-    <a href="../pt/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">PT</a>
-    <a href="../he/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HE</a>
-    <a href="../ar/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AR</a>
-    <a href="../am/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AM</a>
-    <a href="../hi/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HI</a>
-    <a href="../zh/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ZH</a>
-    <a href="../ja/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">JA</a>
-    <a href="../ko/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">KO</a>
-    <a href="../sw/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">SW</a>
-</div>
-✝ Hora Santa
-Hogar
-Acerca de
-Características
-Descargar
-Encuentra una iglesia
-Contacto
-Privacidad
-Contacto y peticiones de oración
-No dudes en pedir oraciones; estamos aquí para orar por ti. Ninguna petición es demasiado grande ni demasiado pequeña.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto | Hora Santa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hogar</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="features.html">Características</a></li>
+                <li><a href="download.html">Descargar</a></li>
+                <li><a href="churches.html">Encuentra una iglesia</a></li>
+                <li><a href="contact.html" class="active">Contacto</a></li>
+                <li><a href="privacy.html">Privacidad</a></li>
+            </ul>
+        </nav>
+        <h1>Contacto</h1>
+        <p>¿Tienes alguna pregunta o necesitas oración? ¡Nos encantaría saber de ti! Puedes comunicarte con nosotros usando el formulario o enviándonos un correo electrónico.</p>
+    </header>
 
-🙏 Envía una petición de oración
-Débora estaría encantada de orar por ti. Completa el formulario a continuación y ella personalmente presentará tu petición ante el Señor. ¡Te queremos mucho!
+    <main>
+        <section>
+            <h2>Envíanos tu mensaje</h2>
+            <form>
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-Su nombre *
-Introduce tu nombre
-Tu correo electrónico *
-Introduce tu dirección de correo electrónico
-Tu petición de oración *
-Comparte aquí tu petición de oración. Dios escucha cada palabra, y Débora también. ✝
-🙏 Envía tu petición de oración
-Su información se mantendrá confidencial. Al enviar este formulario, acepta nuestra Política de Privacidad .
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" required>
 
-Ponte en contacto
-📧
-Envíanos un correo electrónico
-Para peticiones de oración, preguntas o comentarios:
-cristovieneprontobydeborah@gmail.com
+                <label for="mensaje">Mensaje o petición de oración *</label>
+                <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
 
-📱
-Descarga la aplicación
-Envía tus peticiones de oración y accede a todas las funciones a través de la aplicación Hora Santa. Disponible para iOS y Android .
+                <button type="submit">Enviar mensaje</button>
+            </form>
+            <p style="font-size:0.9em; opacity:0.7;">
+                Tu información es confidencial. Al enviar el formulario, aceptas nuestra <a href="privacy.html">Política de Privacidad</a>.
+            </p>
+        </section>
 
-⛪
-Encuentra una iglesia
-¿Buscas una iglesia local? Podemos ayudarte a encontrar una congregación acogedora cerca de ti. Consulta nuestro directorio de iglesias .
+        <section>
+            <h2>Información de contacto</h2>
+            <ul>
+                <li>
+                    <strong>Correo electrónico:</strong> 
+                    <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a>
+                </li>
+                <li>
+                    <strong>Hora Santa también está disponible como aplicación.</strong>
+                    <br>
+                    <a href="download.html">Descarga Hora Santa</a>
+                </li>
+            </ul>
+        </section>
 
-✝
-Déborah ora personalmente por cada petición recibida durante la Hora Santa. No estás solo/a en tu camino. El Señor te escucha, y nosotros también.
+        <section>
+            <h2>Peticiones de oración</h2>
+            <p>
+                Débora estaría encantada de orar por ti personalmente. Usa el formulario arriba o envía tu petición por correo electrónico. 
+                <br>
+                Ninguna petición es demasiado grande ni demasiado pequeña. ¡Dios te bendiga!
+            </p>
+        </section>
+    </main>
 
-«¿Está alguno de vosotros afligido? Que ore.» — Santiago 5:13
-
-✝ Hora Santa : Oración, Escrituras y Crecimiento Espiritual
-
-Contacto: cristovieneprontobydeborah@gmail.com
-
-Cristo Viene Pronto — Todas las denominaciones son bienvenidas ✝
-
-Hogar
-Acerca de
-Características
-Descargar
-Encuentra una iglesia
-Contacto
-política de privacidad
-© 2024 Hora Santa. Todos los derechos reservados.
+    <footer>
+        <p>✝ Hora Santa — Oración, Escrituras y Crecimiento Espiritual</p>
+        <p>Contacto: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+        <p style="margin-top:6px;font-style:italic;opacity:0.8;">Cristo Viene Pronto — Todas las denominaciones son bienvenidas ✝</p>
+        <div class="footer-links">
+            <a href="index.html">Hogar</a>
+            <a href="about.html">Acerca de</a>
+            <a href="features.html">Características</a>
+            <a href="download.html">Descargar</a>
+            <a href="churches.html">Encuentra una iglesia</a>
+            <a href="contact.html">Contacto</a>
+            <a href="privacy.html">Privacidad</a>
+        </div>
+        <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Hora Santa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+    </html>
