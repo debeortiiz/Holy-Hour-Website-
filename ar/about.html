@@ -1,28 +1,125 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>معلومات عنا</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معلومات عنا – Holy Hour</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+        nav { background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%); padding: 0 20px; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 14px 0; }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a { color: #d4c8ff; text-decoration: none; padding: 6px 10px; border-radius: 4px; font-size: 0.9rem; transition: background 0.2s, color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.15); color: #fff; }
+        .page-hero { background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%); color: #fff; text-align: center; padding: 70px 20px 60px; }
+        .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 14px; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+        .content { max-width: 860px; margin: 0 auto; padding: 60px 20px; }
+        .card { background: #f8f6ff; border-left: 5px solid #3b2d8f; border-radius: 8px; padding: 28px 28px 28px 24px; margin-bottom: 32px; }
+        .card h2 { color: #3b2d8f; font-size: 1.35rem; margin-bottom: 12px; }
+        .card p { line-height: 1.8; color: #444; }
+        .card p + p { margin-top: 12px; }
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 36px 0; }
+        .value-item { background: #fff; border: 1px solid #e0d8ff; border-radius: 10px; padding: 24px 20px; text-align: center; }
+        .value-item .icon { font-size: 2rem; margin-bottom: 10px; }
+        .value-item h3 { color: #3b2d8f; margin-bottom: 8px; font-size: 1.05rem; }
+        .value-item p { color: #555; font-size: 0.93rem; line-height: 1.6; }
+        .cta-box { background: linear-gradient(135deg, #3b2d8f, #6b21a8); color: #fff; border-radius: 12px; padding: 36px 28px; text-align: center; margin-top: 40px; }
+        .cta-box h3 { font-size: 1.5rem; margin-bottom: 12px; }
+        .cta-box p { opacity: 0.9; line-height: 1.7; margin-bottom: 22px; }
+        .btn { display: inline-block; background: #fff; color: #3b2d8f; padding: 12px 26px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 0.97rem; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-2px); }
+        footer { background: #0f0f4a; color: #aaa; text-align: center; padding: 36px 20px; font-size: 0.9rem; line-height: 1.8; }
+        footer a { color: #b8a9ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+        .language-switcher { background: #f0eeff; text-align: center; padding: 18px 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+        .language-switcher a { color: #3b2d8f; text-decoration: none; padding: 5px 11px; border: 1px solid #c4b8f0; border-radius: 4px; font-size: 0.85rem; font-weight: 600; transition: background 0.2s, color 0.2s; }
+        .language-switcher a:hover, .language-switcher a.active { background: #3b2d8f; color: #fff; }
+    </style>
 </head>
-<body>
-  <h1>معلومات عنا</h1>
-  <div class="language-switcher" style="background:#f0eeff;text-align:center;padding:18px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px;">
-    <a href="../about.html">EN</a>
-    <a href="../es/about.html">ES</a>
-    <a href="../de/about.html">DE</a>
-    <a href="../it/about.html">IT</a>
-    <a href="../fr/about.html">FR</a>
-    <a href="../pt/about.html">PT</a>
-    <a href="../he/about.html">HE</a>
-    <a href="about.html" style="background:#3b2d8f;color:#fff;">AR</a>
-    <a href="../am/about.html">AM</a>
-    <a href="../hi/about.html">HI</a>
-    <a href="../zh/about.html">ZH</a>
-    <a href="../ja/about.html">JA</a>
-    <a href="../ko/about.html">KO</a>
-    <a href="../sw/about.html">SW</a>
-  </div>
-  <!-- Page content -->
+<body dir="rtl">
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html" class="active">معلومات عنا</a>
+            <a href="features.html">الميزات</a>
+            <a href="download.html">تحميل</a>
+            <a href="churches.html">ابحث عن كنيسة</a>
+            <a href="contact.html">اتصل بنا</a>
+            <a href="privacy.html">الخصوصية</a>
+        </div>
+    </div>
+</nav>
+<div class="page-hero">
+    <h1>معلومات عن Holy Hour</h1>
+    <p>مهمتنا هي مساعدة كل مؤمن على الاقتراب أكثر من الله من خلال الصلاة والكتاب المقدس والمجتمع الروحي.</p>
+</div>
+<div class="content">
+    <div class="card">
+        <h2>✝ مهمتنا</h2>
+        <p>تم إنشاء Holy Hour لإعطاء كل مسيحي مساحة بسيطة وجميلة لقضاء وقت مخصص مع الله. سواء كان لديك خمس دقائق أو ساعة كاملة، يرشدك تطبيقنا خلال الصلاة وقراءة الكتاب المقدس والتأمل الروحي.</p>
+        <p>نؤمن بأن الوقت المستمر في حضور الله يحول القلوب والعائلات والمجتمعات. Cristo Viene Pronto — المسيح قادم قريباً — ونريد مساعدة أكبر عدد ممكن من الناس على الاستعداد لمقابلته.</p>
+    </div>
+    <div class="card">
+        <h2>🌍 رؤيتنا</h2>
+        <p>نتصور مجتمعاً مسيحياً عالمياً — موحداً عبر جميع الطوائف — يعطي الأولوية للصلاة وكلمة الله. Holy Hour هي أداة لكل مؤمن، بغض النظر عن خلفيته أو تقليده أو انتمائه الكنسي.</p>
+        <p>نحن لسنا طائفيين. نرحب بالمعمدانيين والخمسينيين والميثوديين والمؤمنين غير الطائفيين وجميع الآخرين. إذا كنت تحب يسوع، فأنت موضع ترحيب هنا.</p>
+    </div>
+    <div class="card">
+        <h2>🙏 ديبورا تودّ الصلاة من أجلك!</h2>
+        <p>تأسست Holy Hour على يد ديبورا، غير أنها كانت وعاءً استخدمه الله لجعل التطبيق ممكناً. تعلم أن معماري التطبيق هو يسوع، أدوناي، والروح القدس. كل الفضل لهم! ديبورا خادمة متحمسة للمسيح وقلبها هو الشفاعة من أجل الآخرين. من خلال هذه المنصة، تدعوك لتقديم طلبات الصلاة الخاصة بك حتى تتمكن من الصلاة شخصياً على احتياجاتك.</p>
+        <p>لا توجد طلبات كبيرة جداً أو صغيرة جداً. أنت محبوب، أنت مرئي، ويُصلى من أجلك. تواصل معنا في أي وقت على <a href="mailto:cristovieneprontobydeborah@gmail.com" style="color:#3b2d8f;">cristovieneprontobydeborah@gmail.com</a>.</p>
+    </div>
+    <h2 style="color:#1a1a6e; text-align:center; margin-bottom:6px;">قيمنا الأساسية</h2>
+    <p style="text-align:center; color:#666; margin-bottom:0;">ما يرشد كل ما نفعله</p>
+    <div class="values-grid">
+        <div class="value-item"><div class="icon">🙏</div><h3>الصلاة أولاً</h3><p>كل شيء يبدأ وينتهي بالصلاة. نؤمن بأن الصلاة تغير الأمور.</p></div>
+        <div class="value-item"><div class="icon">📖</div><h3>الكتاب المقدس</h3><p>كلمة الله هي أساسنا. نربط كل ميزة بالحق الكتابي.</p></div>
+        <div class="value-item"><div class="icon">❤️</div><h3>الوحدة</h3><p>جميع الطوائف موضع ترحيب. نحن جسد واحد في المسيح.</p></div>
+        <div class="value-item"><div class="icon">🌱</div><h3>النمو</h3><p>نلتزم بمساعدة كل مؤمن على النمو في الإيمان.</p></div>
+    </div>
+    <div class="cta-box">
+        <h3>🙏 هل تحتاج إلى شخص يصلي من أجلك؟</h3>
+        <p>ديبورا وفريق Holy Hour هنا للصلاة من أجلك. قدّم طلب صلاتك اليوم — سيكون شرفاً لنا أن نرفعك إلى الرب.</p>
+        <a href="contact.html" class="btn">أرسل طلب صلاة</a>
+    </div>
+</div>
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — صلاة وكتاب مقدس ونمو روحي</p>
+    <p style="margin-top:6px;">اتصل بنا: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">Cristo Viene Pronto — جميع الطوائف موضع ترحيب ✝</p>
+    <div class="footer-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">معلومات عنا</a>
+        <a href="features.html">الميزات</a>
+        <a href="download.html">تحميل</a>
+        <a href="churches.html">ابحث عن كنيسة</a>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="privacy.html">الخصوصية</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. All rights reserved.</p>
+    <div class="language-switcher">
+        <a href="../about.html">EN</a>
+        <a href="../es/about.html">ES</a>
+        <a href="../de/about.html">DE</a>
+        <a href="../it/about.html">IT</a>
+        <a href="../fr/about.html">FR</a>
+        <a href="../pt/about.html">PT</a>
+        <a href="../he/about.html">HE</a>
+        <a href="about.html" class="active">AR</a>
+        <a href="../am/about.html">AM</a>
+        <a href="../hi/about.html">HI</a>
+        <a href="../zh/about.html">ZH</a>
+        <a href="../ja/about.html">JA</a>
+        <a href="../ko/about.html">KO</a>
+        <a href="../sw/about.html">SW</a>
+    </div>
+</footer>
 </body>
 </html>
