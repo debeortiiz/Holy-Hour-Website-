@@ -1,0 +1,120 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f6ff;
+  color: #2d2374;
+  margin: 0;
+  padding: 0;
+}
+header, footer {
+  background: #e3d8fc;
+  padding: 22px 0;
+  text-align: center;
+}
+header h1 {
+  margin-bottom: 0.7em;
+  color: #3b2d8f;
+  letter-spacing: 1px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 11px;
+}
+nav ul li a, .footer-links a {
+  color: #3b2d8f;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.24s;
+}
+nav ul li a.active, nav ul li a:hover,
+.footer-links a.active, .footer-links a:hover {
+  background: #3b2d8f;
+  color: #fff;
+}
+main {
+  max-width: 700px;
+  margin: 35px auto 35px auto;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 1px 7px #3b2d8f12;
+  padding: 30px 25px;
+}
+section {
+  margin-bottom: 35px;
+}
+.btn, button, a.store-link {
+  background: #3b2d8f;
+  color: #fff !important;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 12px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover, a.store-link:hover {
+  background: #5633c5;
+}
+.footer-links {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.language-switcher {
+  background: #f0eeff;
+  text-align: center;
+  padding: 18px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+.language-switcher a {
+  color: #3b2d8f;
+  text-decoration: none;
+  padding: 5px 11px;
+  border: 1px solid #c4b8f0;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: none;
+  transition: background 0.2s;
+}
+.language-switcher a.active, .language-switcher a:focus, .language-switcher a:hover {
+  background: #3b2d8f;
+  color: #fff !important;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 18px;
+}
+input, textarea {
+  padding: 8px 9px;
+  border-radius: 5px;
+  border: 1px solid #bcb3e6;
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  main {
+    margin: 20px;
+    padding: 16px;
+  }
+  nav ul {
+    gap: 4px;
+  }
+}
