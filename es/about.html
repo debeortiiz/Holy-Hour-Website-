@@ -1,113 +1,247 @@
 <!DOCTYPE html>
-<html lang="es"> <link rel="stylesheet" href="style.css">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Acerca de | Hora Santa</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Aquí puedes incluir tus enlaces a CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de – Holy Hour</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px 60px;
+        }
+        .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 14px; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+        .content { max-width: 860px; margin: 0 auto; padding: 60px 20px; }
+
+        .card {
+            background: #f8f6ff;
+            border-left: 5px solid #3b2d8f;
+            border-radius: 8px;
+            padding: 28px 28px 28px 24px;
+            margin-bottom: 32px;
+        }
+        .card h2 { color: #3b2d8f; font-size: 1.35rem; margin-bottom: 12px; }
+        .card p { line-height: 1.8; color: #444; }
+        .card p + p { margin-top: 12px; }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 36px 0;
+        }
+        .value-item {
+            background: #fff;
+            border: 1px solid #e0d8ff;
+            border-radius: 10px;
+            padding: 24px 20px;
+            text-align: center;
+        }
+        .value-item .icon { font-size: 2rem; margin-bottom: 10px; }
+        .value-item h3 { color: #3b2d8f; margin-bottom: 8px; font-size: 1.05rem; }
+        .value-item p { color: #555; font-size: 0.93rem; line-height: 1.6; }
+
+        .cta-box {
+            background: linear-gradient(135deg, #3b2d8f, #6b21a8);
+            color: #fff;
+            border-radius: 12px;
+            padding: 36px 28px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta-box h3 { font-size: 1.5rem; margin-bottom: 12px; }
+        .cta-box p { opacity: 0.9; line-height: 1.7; margin-bottom: 22px; }
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #3b2d8f;
+            padding: 12px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.97rem;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: #0f0f4a;
+            color: #aaa;
+            text-align: center;
+            padding: 36px 20px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        footer a { color: #b8a9ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">✝ Hora Santa</a></li>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html" class="active">Acerca de</a></li>
-        <li><a href="features.html">Características</a></li>
-        <li><a href="download.html">Descargar</a></li>
-        <li><a href="churches.html">Encuentra una iglesia</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-        <li><a href="privacy.html">Política de privacidad</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <h1>Acerca de la Hora Santa</h1>
-      <p>
-        Nuestra misión es ayudar a cada creyente a acercarse más a Dios a través de la oración, las Escrituras y la comunidad espiritual.
-      </p>
-    </section>
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="about.html" class="active">Acerca de</a>
+            <a href="features.html">Funciones</a>
+            <a href="download.html">Descargar</a>
+            <a href="churches.html">Encontrar Iglesia</a>
+            <a href="contact.html">Contacto</a>
+            <a href="privacy.html">Privacidad</a>
+        </div>
+    </div>
+</nav>
 
-    <section>
-      <h2>✝ Nuestra misión</h2>
-      <p>
-        Hora Santa fue creada para ofrecer a cada cristiano un espacio sencillo y hermoso donde dedicar tiempo a Dios. Ya sea que dispongas de cinco minutos o de una hora entera, nuestra aplicación te guía en la oración, la lectura de las Escrituras y la reflexión espiritual.
-      </p>
-      <p>
-        Creemos que pasar tiempo consistentemente en la presencia de Dios transforma corazones, familias y comunidades. <strong>¡Cristo Viene Pronto!</strong> — y queremos ayudar a la mayor cantidad de personas posible a prepararse para encontrarse con Él.
-      </p>
-    </section>
+<div class="page-hero">
+    <h1>Acerca de Holy Hour</h1>
+    <p>Nuestra misión es ayudar a cada creyente a acercarse más a Dios a través de la oración, las Escrituras y la comunidad espiritual.</p>
+</div>
 
-    <section>
-      <h2>🌍 Nuestra visión</h2>
-      <p>
-        Visualizamos una comunidad cristiana global, unida entre todas las denominaciones, que priorice la oración y la Palabra de Dios. Hora Santa es una herramienta para todo creyente, independientemente de su trasfondo, tradición o afiliación religiosa.
-      </p>
-      <p>
-        No pertenecemos a ninguna denominación en particular. Damos la bienvenida a bautistas, pentecostales, metodistas, creyentes no denominacionales y a todos los demás. Si amas a Jesús, eres bienvenido/a aquí.
-      </p>
-    </section>
+<div class="content">
 
-    <section>
-      <h2>🙏 ¡A Deborah le encantaría orar por ti!</h2>
-      <p>
-        ¡A Deborah le encantaría orar por ti! Hora Santa fue fundada por Deborah, quien fue un instrumento que Dios usó para hacer posible la aplicación. Ella sabe que los verdaderos artífices de la app son Yeshua, Adonai y el Espíritu Santo: ¡el mérito es de ellos! Deborah es una sierva devota de Cristo, cuyo corazón anhela interceder por los demás. A través de esta plataforma, te invita a enviar tus peticiones de oración para que ella pueda orar personalmente por tus necesidades.
-      </p>
-      <p>
-        Ninguna petición es demasiado grande ni demasiado pequeña. Eres amado/a, te vemos y oramos por ti.<br>
-        Puedes contactarnos en cualquier momento en <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a>.
-      </p>
-    </section>
+    <div class="card">
+        <h2>✝ Nuestra Misión</h2>
+        <p>Holy Hour fue creada para ofrecer a cada cristiano un espacio sencillo y hermoso donde dedicar tiempo a Dios. Ya sea que dispongas de cinco minutos o de una hora entera, nuestra aplicación te guía en la oración, la lectura de las Escrituras y la reflexión espiritual.</p>
+        <p>Creemos que pasar tiempo de manera constante en la presencia de Dios transforma corazones, familias y comunidades. Cristo Viene Pronto — y queremos ayudar a la mayor cantidad de personas posible a prepararse para encontrarse con Él.</p>
+    </div>
 
-    <section>
-      <h2>Nuestros valores fundamentales</h2>
-      <ul>
-        <li>
-          <strong>🙏 Primero la oración:</strong>
-          Todo comienza y termina con la oración. Creemos que la oración lo cambia todo.
-        </li>
-        <li>
-          <strong>📖 Sagrada Escritura:</strong>
-          La Palabra de Dios es nuestro fundamento. Todas nuestras acciones se rigen por la verdad bíblica.
-        </li>
-        <li>
-          <strong>❤️ Unidad:</strong>
-          Todas las denominaciones son bienvenidas. Somos un solo cuerpo en Cristo.
-        </li>
-        <li>
-          <strong>🌱 Crecimiento:</strong>
-          Nos comprometemos a ayudar a cada creyente a profundizar en su fe.
-        </li>
-      </ul>
-    </section>
+    <div class="card">
+        <h2>🌍 Nuestra Visión</h2>
+        <p>Visualizamos una comunidad cristiana global, unida entre todas las denominaciones, que priorice la oración y la Palabra de Dios. Holy Hour es una herramienta para todo creyente, independientemente de su trasfondo, tradición o afiliación religiosa.</p>
+        <p>No pertenecemos a ninguna denominación en particular. Damos la bienvenida a bautistas, pentecostales, metodistas, creyentes no denominacionales y a todos los demás. Si amas a Jesús, eres bienvenido/a aquí.</p>
+    </div>
 
-    <section class="prayer-request">
-      <h2>🙏 ¿Necesitas que alguien ore por ti?</h2>
-      <p>
-        Deborah y el equipo de Hora Santa están aquí para orar por ti. Envía tu petición de oración hoy mismo; será un honor encomendarte al Señor.
-      </p>
-      <a class="button" href="contact.html">Enviar una petición de oración</a>
-    </section>
+    <div class="card">
+        <h2>🙏 ¡A Deborah le encantaría orar por ti!</h2>
+        <p>Holy Hour fue fundada por Deborah, quien fue un instrumento que Dios usó para hacer posible la aplicación. Ella sabe que los verdaderos artífices de la app son Yeshua, Adonai y el Espíritu Santo: ¡el mérito es de ellos! Deborah es una sierva devota de Cristo, cuyo corazón anhela interceder por los demás. A través de esta plataforma, te invita a enviar tus peticiones de oración para que ella pueda orar personalmente por tus necesidades.</p>
+        <p>Ninguna petición es demasiado grande ni demasiado pequeña. Eres amado/a, te vemos y oramos por ti. Puedes contactarnos en cualquier momento en <a href="mailto:cristovieneprontobydeborah@gmail.com" style="color:#3b2d8f;">cristovieneprontobydeborah@gmail.com</a>.</p>
+    </div>
 
-    <footer>
-      <p>✝ Hora Santa: Oración, Escrituras y Crecimiento Espiritual</p>
-      <p>Contacto: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
-      <p>¡Cristo Viene Pronto! — Todas las denominaciones son bienvenidas ✝</p>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="about.html">Acerca de</a></li>
-          <li><a href="features.html">Características</a></li>
-          <li><a href="download.html">Descargar</a></li>
-          <li><a href="churches.html">Encuentra una iglesia</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-          <li><a href="privacy.html">Política de privacidad</a></li>
-        </ul>
-      </nav>
-      <p>© 2026 Hora Santa. Todos los derechos reservados.</p>
-    </footer>
-  </main>
+    <h2 style="color:#1a1a6e; text-align:center; margin-bottom:6px;">Nuestros Valores Fundamentales</h2>
+    <p style="text-align:center; color:#666; margin-bottom:0;">Lo que guía todo lo que hacemos</p>
+    <div class="values-grid">
+        <div class="value-item">
+            <div class="icon">🙏</div>
+            <h3>La Oración Primero</h3>
+            <p>Todo comienza y termina con la oración. Creemos que la oración lo cambia todo.</p>
+        </div>
+        <div class="value-item">
+            <div class="icon">📖</div>
+            <h3>Las Escrituras</h3>
+            <p>La Palabra de Dios es nuestro fundamento. Anclamos cada función en la verdad bíblica.</p>
+        </div>
+        <div class="value-item">
+            <div class="icon">❤️</div>
+            <h3>Unidad</h3>
+            <p>Todas las denominaciones son bienvenidas. Somos un solo cuerpo en Cristo.</p>
+        </div>
+        <div class="value-item">
+            <div class="icon">🌱</div>
+            <h3>Crecimiento</h3>
+            <p>Nos comprometemos a ayudar a cada creyente a profundizar en su fe.</p>
+        </div>
+    </div>
+
+    <div class="cta-box">
+        <h3>🙏 ¿Necesitas que alguien ore por ti?</h3>
+        <p>Deborah y el equipo de Holy Hour están aquí para orar por ti. Envía tu petición de oración hoy mismo — sería un honor encomendarte al Señor.</p>
+        <a href="contact.html" class="btn">Enviar una Petición de Oración</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — Oración, Escrituras y Crecimiento Espiritual</p>
+    <p style="margin-top:6px;">Contacto: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">Cristo Viene Pronto — Todas las denominaciones son bienvenidas ✝</p>
+    <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">Acerca de</a>
+        <a href="features.html">Funciones</a>
+        <a href="download.html">Descargar</a>
+        <a href="churches.html">Encontrar Iglesia</a>
+        <a href="contact.html">Contacto</a>
+        <a href="privacy.html">Privacidad</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. All rights reserved.</p>
+<div class="language-switcher">
+    <a href="../about.html">EN</a>
+    <a href="about.html" class="active">ES</a>
+    <a href="../de/about.html">DE</a>
+    <a href="../it/about.html">IT</a>
+    <a href="../fr/about.html">FR</a>
+    <a href="../pt/about.html">PT</a>
+    <a href="../he/about.html">HE</a>
+    <a href="../ar/about.html">AR</a>
+    <a href="../am/about.html">AM</a>
+    <a href="../hi/about.html">HI</a>
+    <a href="../zh/about.html">ZH</a>
+    <a href="../ja/about.html">JA</a>
+    <a href="../ko/about.html">KO</a>
+    <a href="../sw/about.html">SW</a>
+</div>
+</footer>
+
 </body>
-  </html>
+</html>
