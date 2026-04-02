@@ -1,28 +1,125 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>À propos de nous</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos – Holy Hour</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+        nav { background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%); padding: 0 20px; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 14px 0; }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a { color: #d4c8ff; text-decoration: none; padding: 6px 10px; border-radius: 4px; font-size: 0.9rem; transition: background 0.2s, color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.15); color: #fff; }
+        .page-hero { background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%); color: #fff; text-align: center; padding: 70px 20px 60px; }
+        .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 14px; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+        .content { max-width: 860px; margin: 0 auto; padding: 60px 20px; }
+        .card { background: #f8f6ff; border-left: 5px solid #3b2d8f; border-radius: 8px; padding: 28px 28px 28px 24px; margin-bottom: 32px; }
+        .card h2 { color: #3b2d8f; font-size: 1.35rem; margin-bottom: 12px; }
+        .card p { line-height: 1.8; color: #444; }
+        .card p + p { margin-top: 12px; }
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 36px 0; }
+        .value-item { background: #fff; border: 1px solid #e0d8ff; border-radius: 10px; padding: 24px 20px; text-align: center; }
+        .value-item .icon { font-size: 2rem; margin-bottom: 10px; }
+        .value-item h3 { color: #3b2d8f; margin-bottom: 8px; font-size: 1.05rem; }
+        .value-item p { color: #555; font-size: 0.93rem; line-height: 1.6; }
+        .cta-box { background: linear-gradient(135deg, #3b2d8f, #6b21a8); color: #fff; border-radius: 12px; padding: 36px 28px; text-align: center; margin-top: 40px; }
+        .cta-box h3 { font-size: 1.5rem; margin-bottom: 12px; }
+        .cta-box p { opacity: 0.9; line-height: 1.7; margin-bottom: 22px; }
+        .btn { display: inline-block; background: #fff; color: #3b2d8f; padding: 12px 26px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 0.97rem; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-2px); }
+        footer { background: #0f0f4a; color: #aaa; text-align: center; padding: 36px 20px; font-size: 0.9rem; line-height: 1.8; }
+        footer a { color: #b8a9ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+        .language-switcher { background: #f0eeff; text-align: center; padding: 18px 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+        .language-switcher a { color: #3b2d8f; text-decoration: none; padding: 5px 11px; border: 1px solid #c4b8f0; border-radius: 4px; font-size: 0.85rem; font-weight: 600; transition: background 0.2s, color 0.2s; }
+        .language-switcher a:hover, .language-switcher a.active { background: #3b2d8f; color: #fff; }
+    </style>
 </head>
 <body>
-  <h1>À propos de nous</h1>
-  <div class="language-switcher" style="background:#f0eeff;text-align:center;padding:18px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px;">
-    <a href="../about.html">EN</a>
-    <a href="../es/about.html">ES</a>
-    <a href="../de/about.html">DE</a>
-    <a href="../it/about.html">IT</a>
-    <a href="about.html" style="background:#3b2d8f;color:#fff;">FR</a>
-    <a href="../pt/about.html">PT</a>
-    <a href="../he/about.html">HE</a>
-    <a href="../ar/about.html">AR</a>
-    <a href="../am/about.html">AM</a>
-    <a href="../hi/about.html">HI</a>
-    <a href="../zh/about.html">ZH</a>
-    <a href="../ja/about.html">JA</a>
-    <a href="../ko/about.html">KO</a>
-    <a href="../sw/about.html">SW</a>
-  </div>
-  <!-- Page content -->
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="about.html" class="active">À propos</a>
+            <a href="features.html">Fonctionnalités</a>
+            <a href="download.html">Télécharger</a>
+            <a href="churches.html">Trouver une Église</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Confidentialité</a>
+        </div>
+    </div>
+</nav>
+<div class="page-hero">
+    <h1>À propos de Holy Hour</h1>
+    <p>Notre mission est d'aider chaque croyant à se rapprocher de Dieu par la prière, l'Écriture et la communauté spirituelle.</p>
+</div>
+<div class="content">
+    <div class="card">
+        <h2>✝ Notre Mission</h2>
+        <p>Holy Hour a été créée pour offrir à chaque chrétien un espace simple et magnifique pour passer du temps avec Dieu. Que vous ayez cinq minutes ou une heure entière, notre application vous guide dans la prière, la lecture des Écritures et la réflexion spirituelle.</p>
+        <p>Nous croyons qu'un temps régulier en présence de Dieu transforme les cœurs, les familles et les communautés. Cristo Viene Pronto — Christ vient bientôt — et nous voulons aider autant de personnes que possible à être prêtes à Le rencontrer.</p>
+    </div>
+    <div class="card">
+        <h2>🌍 Notre Vision</h2>
+        <p>Nous envisageons une communauté chrétienne mondiale — unie à travers toutes les dénominations — qui donne la priorité à la prière et à la Parole de Dieu. Holy Hour est un outil pour chaque croyant, indépendamment de son milieu, de sa tradition ou de son appartenance ecclésiale.</p>
+        <p>Nous ne sommes pas confessionnels. Nous accueillons les baptistes, les pentecôtistes, les méthodistes, les croyants non confessionnels et tous les autres. Si vous aimez Jésus, vous êtes le/la bienvenu(e) ici.</p>
+    </div>
+    <div class="card">
+        <h2>🙏 Deborah aimerait prier pour vous !</h2>
+        <p>Holy Hour a été fondée par Deborah, qui a été un vase dont Dieu s'est servi pour rendre l'application possible. Elle sait que l'architecte de l'application est Yeshua, Adonai et le Saint-Esprit. Tout le crédit leur revient ! Deborah est une servante passionnée de Christ dont le cœur est d'intercéder pour les autres. Par cette plateforme, elle vous invite à soumettre vos demandes de prière afin qu'elle puisse prier personnellement pour vos besoins.</p>
+        <p>Aucune demande n'est trop grande ou trop petite. Vous êtes aimé(e), vous êtes vu(e) et vous êtes en prière. Contactez-nous à tout moment à <a href="mailto:cristovieneprontobydeborah@gmail.com" style="color:#3b2d8f;">cristovieneprontobydeborah@gmail.com</a>.</p>
+    </div>
+    <h2 style="color:#1a1a6e; text-align:center; margin-bottom:6px;">Nos Valeurs Fondamentales</h2>
+    <p style="text-align:center; color:#666; margin-bottom:0;">Ce qui guide tout ce que nous faisons</p>
+    <div class="values-grid">
+        <div class="value-item"><div class="icon">🙏</div><h3>La Prière d'Abord</h3><p>Tout commence et se termine par la prière. Nous croyons que la prière change les choses.</p></div>
+        <div class="value-item"><div class="icon">📖</div><h3>Les Écritures</h3><p>La Parole de Dieu est notre fondement. Nous ancrons chaque fonctionnalité dans la vérité biblique.</p></div>
+        <div class="value-item"><div class="icon">❤️</div><h3>Unité</h3><p>Toutes les dénominations sont bienvenues. Nous sommes un seul corps en Christ.</p></div>
+        <div class="value-item"><div class="icon">🌱</div><h3>Croissance</h3><p>Nous nous engageons à aider chaque croyant à grandir plus profondément dans la foi.</p></div>
+    </div>
+    <div class="cta-box">
+        <h3>🙏 Besoin de quelqu'un pour prier pour vous ?</h3>
+        <p>Deborah et l'équipe Holy Hour sont là pour prier pour vous. Soumettez votre demande de prière aujourd'hui — ce serait un honneur de vous présenter au Seigneur.</p>
+        <a href="contact.html" class="btn">Envoyer une Demande de Prière</a>
+    </div>
+</div>
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — Prière, Écritures &amp; Croissance Spirituelle</p>
+    <p style="margin-top:6px;">Contact: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">Cristo Viene Pronto — Toutes dénominations bienvenues ✝</p>
+    <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="features.html">Fonctionnalités</a>
+        <a href="download.html">Télécharger</a>
+        <a href="churches.html">Trouver une Église</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Confidentialité</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. All rights reserved.</p>
+    <div class="language-switcher">
+        <a href="../about.html">EN</a>
+        <a href="../es/about.html">ES</a>
+        <a href="../de/about.html">DE</a>
+        <a href="../it/about.html">IT</a>
+        <a href="about.html" class="active">FR</a>
+        <a href="../pt/about.html">PT</a>
+        <a href="../he/about.html">HE</a>
+        <a href="../ar/about.html">AR</a>
+        <a href="../am/about.html">AM</a>
+        <a href="../hi/about.html">HI</a>
+        <a href="../zh/about.html">ZH</a>
+        <a href="../ja/about.html">JA</a>
+        <a href="../ko/about.html">KO</a>
+        <a href="../sw/about.html">SW</a>
+    </div>
+</footer>
 </body>
 </html>
