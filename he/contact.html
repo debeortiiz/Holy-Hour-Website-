@@ -1,29 +1,152 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>יצירת קשר – Holy Hour</title>
+    <title>יצירת קשר ובקשות תפילה – Holy Hour</title>
+    <!-- שמרו על ה-CSS כמו בתבנית הספרדית או השתמשו בקובץ המשותף -->
 </head>
-<body dir="rtl">
-<h1>יצירת קשר</h1>
-<div class="language-switcher" style="background:#f0eeff;text-align:center;padding:18px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px;">
-    <a href="../contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">EN</a>
-    <a href="../es/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ES</a>
-    <a href="../de/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">DE</a>
-    <a href="../it/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">IT</a>
-    <a href="../fr/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">FR</a>
-    <a href="../pt/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">PT</a>
-    <a href="contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;background:#3b2d8f;color:#fff;">HE</a>
-    <a href="../ar/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AR</a>
-    <a href="../am/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AM</a>
-    <a href="../hi/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HI</a>
-    <a href="../zh/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ZH</a>
-    <a href="../ja/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">JA</a>
-    <a href="../ko/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">KO</a>
-    <a href="../sw/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">SW</a>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">דף הבית</a>
+            <a href="about.html">אודות</a>
+            <a href="features.html">תכונות</a>
+            <a href="download.html">הורדה</a>
+            <a href="churches.html">מציאת כנסייה</a>
+            <a href="contact.html" class="active">יצירת קשר</a>
+            <a href="privacy.html">פרטיות</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>יצירת קשר ובקשות תפילה</h1>
+    <p>אל תהססו לשלוח בקשות תפילה — אנחנו כאן כדי להתפלל איתכם. אין בקשה קטנה מדי או גדולה מדי.</p>
 </div>
 
+<div class="content">
+    <div class="contact-grid">
+
+        <!-- טופס בקשת תפילה -->
+        <div class="form-section">
+            <h2>🙏 שליחת בקשת תפילה</h2>
+            <p class="form-intro">לדבורה יהיה לכבוד להתפלל עבורכם. מלאו את הטופס למטה, והיא תציג את בקשתכם באופן אישי לפני ה׳. אתם אהובים!</p>
+
+            <form id="prayer-form" onsubmit="handleSubmit(event)">
+
+                <div class="form-group">
+                    <label for="name">השם שלכם *</label>
+                    <input type="text" id="name" name="name" placeholder="הכניסו את שמכם" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">האימייל שלכם *</label>
+                    <input type="email" id="email" name="email" placeholder="הכניסו את כתובת האימייל שלכם" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prayer">בקשת התפילה שלכם *</label>
+                    <textarea id="prayer" name="prayer" placeholder="שתפו כאן את בקשתכם. אלוהים שומע כל מילה — וגם דבורה. ✝" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">🙏 שליחת הבקשה</button>
+                <p class="form-note">המידע שלכם יישמר בסודיות. בשליחה אתם מסכימים ל<a href="privacy.html" style="color:#3b2d8f;">מדיניות הפרטיות</a> שלנו.</p>
+            </form>
+
+            <div id="success-message">
+                <strong>🙏 תודה! בקשת התפילה שלכם התקבלה.</strong><br>
+                דבורה תתפלל עבורכם באופן אישי. אלוהים יברך אתכם! ✝
+            </div>
+        </div>
+
+        <!-- מידע ליצירת קשר -->
+        <div class="contact-info">
+            <h2>צרו קשר</h2>
+
+            <div class="contact-card">
+                <div class="ci-icon">📧</div>
+                <h3>כתבו לנו</h3>
+                <p>לבקשות תפילה, שאלות או משוב:<br>
+                <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+            </div>
+
+            <div class="contact-card">
+                <div class="ci-icon">📱</div>
+                <h3>הורידו את האפליקציה</h3>
+                <p>שלחו בקשות תפילה וקבלו גישה לכל התכונות באפליקציית Holy Hour. זמינה ל<a href="download.html">iOS ו‑Android</a>.</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="ci-icon">⛪</div>
+                <h3>מציאת כנסייה</h3>
+                <p>מחפשים קהילה? נעזור לכם למצוא כנסייה מזמינה בקרבתכם. <a href="churches.html">לספריית הכנסיות</a>.</p>
+            </div>
+
+            <div class="prayer-promise">
+                <div class="pp-icon">✝</div>
+                <p><strong>דבורה מתפללת באופן אישי על כל בקשה שנשלחת דרך Holy Hour.</strong> אתם לא לבד בדרך הזו. ה׳ שומע אתכם — וגם אנחנו.</p>
+                <p class="verse">"היש איש מכם סובל? יתפלל." — יעקב ה׳:י״ג</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — תפילה, כתבי קודש וצמיחה רוחנית</p>
+    <p style="margin-top:6px;">יצירת קשר: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">המשיח חוזר בקרוב — כל הזרמים מוזמנים ✝</p>
+    <div class="footer-links">
+        <a href="index.html">דף הבית</a>
+        <a href="about.html">אודות</a>
+        <a href="features.html">תכונות</a>
+        <a href="download.html">הורדה</a>
+        <a href="churches.html">מציאת כנסייה</a>
+        <a href="contact.html">יצירת קשר</a>
+        <a href="privacy.html">פרטיות</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. כל הזכויות שמורות.</p>
+<div class="language-switcher">
+    <a href="../contact.html">EN</a>
+    <a href="../es/contact.html">ES</a>
+    <a href="../de/contact.html">DE</a>
+    <a href="../it/contact.html">IT</a>
+    <a href="../fr/contact.html">FR</a>
+    <a href="../pt/contact.html">PT</a>
+    <a href="contact.html" class="active">HE</a>
+    <a href="../ar/contact.html">AR</a>
+    <a href="../am/contact.html">AM</a>
+    <a href="../hi/contact.html">HI</a>
+    <a href="../zh/contact.html">ZH</a>
+    <a href="../ja/contact.html">JA</a>
+    <a href="../ko/contact.html">KO</a>
+    <a href="../sw/contact.html">SW</a>
+</div>
+</footer>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const prayer = document.getElementById('prayer').value;
+
+    const subject = encodeURIComponent('בקשת תפילה מאת ' + name + ' – Holy Hour');
+    const body = encodeURIComponent(
+        'שם: ' + name + '\\n' +
+        'אימייל: ' + email + '\\n\\n' +
+        'בקשת תפילה:\\n' + prayer
+    );
+    window.location.href = 'mailto:cristovieneprontobydeborah@gmail.com?subject=' + subject + '&body=' + body;
+    document.getElementById('success-message').style.display = 'block';
+    document.getElementById('prayer-form').reset();
+}
+</script>
+
 </body>
-</html>
+                                          </html>
