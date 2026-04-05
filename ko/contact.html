@@ -4,26 +4,149 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연락처 – Holy Hour</title>
+    <title>문의 & 기도 요청 – Holy Hour</title>
+    <!-- 스페인어 템플릿과 동일한 CSS를 유지하거나 공유 스타일시트를 사용하세요 -->
 </head>
 <body>
-<h1>연락처</h1>
-<div class="language-switcher" style="background:#f0eeff;text-align:center;padding:18px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px;">
-    <a href="../contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">EN</a>
-    <a href="../es/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ES</a>
-    <a href="../de/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">DE</a>
-    <a href="../it/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">IT</a>
-    <a href="../fr/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">FR</a>
-    <a href="../pt/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">PT</a>
-    <a href="../he/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HE</a>
-    <a href="../ar/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AR</a>
-    <a href="../am/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AM</a>
-    <a href="../hi/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HI</a>
-    <a href="../zh/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ZH</a>
-    <a href="../ja/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">JA</a>
-    <a href="contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;background:#3b2d8f;color:#fff;">KO</a>
-    <a href="../sw/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">SW</a>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">홈</a>
+            <a href="about.html">소개</a>
+            <a href="features.html">기능</a>
+            <a href="download.html">다운로드</a>
+            <a href="churches.html">교회 찾기</a>
+            <a href="contact.html" class="active">문의</a>
+            <a href="privacy.html">개인정보</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>문의 & 기도 요청</h1>
+    <p>기도 제목을 보내는 것을 주저하지 마세요 — 우리는 여러분과 함께 기도하기 위해 여기 있습니다. 어떤 요청도 너무 작거나 너무 크지 않습니다.</p>
 </div>
+
+<div class="content">
+    <div class="contact-grid">
+
+        <!-- 기도 요청 폼 -->
+        <div class="form-section">
+            <h2>🙏 기도 요청 보내기</h2>
+            <p class="form-intro">Deborah에게 여러분을 위해 기도하는 것은 큰 영광입니다. 아래 양식을 작성해 주세요. 그녀가 여러분의 요청을 주님 앞에 개인적으로 올려드릴 것입니다. 여러분은 사랑받고 있습니다!</p>
+
+            <form id="prayer-form" onsubmit="handleSubmit(event)">
+
+                <div class="form-group">
+                    <label for="name">이름 *</label>
+                    <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">이메일 *</label>
+                    <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prayer">기도 제목 *</label>
+                    <textarea id="prayer" name="prayer" placeholder="여기에 기도 제목을 적어 주세요. 하나님은 모든 말을 들으십니다 — Deborah도요. ✝" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">🙏 요청 보내기</button>
+                <p class="form-note">입력하신 정보는 비밀로 유지됩니다. 전송하면 <a href="privacy.html" style="color:#3b2d8f;">개인정보 처리방침</a>에 동의하는 것으로 간주됩니다.</p>
+            </form>
+
+            <div id="success-message">
+                <strong>🙏 감사합니다! 기도 요청이 접수되었습니다.</strong><br>
+                Deborah가 여러분을 위해 개인적으로 기도합니다. 하나님께서 축복하시길! ✝
+            </div>
+        </div>
+
+        <!-- 연락 정보 -->
+        <div class="contact-info">
+            <h2>연락하기</h2>
+
+            <div class="contact-card">
+                <div class="ci-icon">📧</div>
+                <h3>이메일 보내기</h3>
+                <p>기도 요청, 질문 또는 피드백:<br>
+                <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+            </div>
+
+            <div class="contact-card">
+                <div class="ci-icon">📱</div>
+                <h3>앱 다운로드</h3>
+                <p>Holy Hour 앱에서 기도 요청을 보내고 모든 기능을 이용하세요. <a href="download.html">iOS 및 Android</a>에서 사용 가능합니다.</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="ci-icon">⛪</div>
+                <h3>교회 찾기</h3>
+                <p>공동체를 찾고 계신가요? 가까운 곳의 환영하는 교회를 찾는 데 도움을 드립니다. <a href="churches.html">디렉토리 보기</a>.</p>
+            </div>
+
+            <div class="prayer-promise">
+                <div class="pp-icon">✝</div>
+                <p><strong>Holy Hour를 통해 보내진 모든 요청을 위해 Deborah가 개인적으로 기도합니다.</strong> 여러분은 혼자가 아닙니다. 주님이 여러분의 목소리를 들으십니다 — 우리도 그렇습니다.</p>
+                <p class="verse">"너희 중에 고난당하는 자가 있느냐 그는 기도할 것이요." — 야고보서 5:13</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — 기도, 성경, 영적 성장</p>
+    <p style="margin-top:6px;">문의: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">그리스도께서 곧 오십니다 — 모든 교단 환영 ✝</p>
+    <div class="footer-links">
+        <a href="index.html">홈</a>
+        <a href="about.html">소개</a>
+        <a href="features.html">기능</a>
+        <a href="download.html">다운로드</a>
+        <a href="churches.html">교회 찾기</a>
+        <a href="contact.html">문의</a>
+        <a href="privacy.html">개인정보</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. 모든 권리 보유.</p>
+<div class="language-switcher">
+    <a href="../contact.html">EN</a>
+    <a href="../es/contact.html">ES</a>
+    <a href="../de/contact.html">DE</a>
+    <a href="../it/contact.html">IT</a>
+    <a href="../fr/contact.html">FR</a>
+    <a href="../pt/contact.html">PT</a>
+    <a href="../he/contact.html">HE</a>
+    <a href="../ar/contact.html">AR</a>
+    <a href="../am/contact.html">AM</a>
+    <a href="../hi/contact.html">HI</a>
+    <a href="../zh/contact.html">ZH</a>
+    <a href="../ja/contact.html">JA</a>
+    <a href="contact.html" class="active">KO</a>
+    <a href="../sw/contact.html">SW</a>
+</div>
+</footer>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const prayer = document.getElementById('prayer').value;
+
+    const subject = encodeURIComponent('기도 요청: ' + name + ' – Holy Hour');
+    const body = encodeURIComponent(
+        '이름: ' + name + '\\n' +
+        '이메일: ' + email + '\\n\\n' +
+        '기도 제목:\\n' + prayer
+    );
+    window.location.href = 'mailto:cristovieneprontobydeborah@gmail.com?subject=' + subject + '&body=' + body;
+    document.getElementById('success-message').style.display = 'block';
+    document.getElementById('prayer-form').reset();
+}
+</script>
 
 </body>
 </html>
