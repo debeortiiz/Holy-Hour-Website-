@@ -4,26 +4,339 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>教堂 – Holy Hour</title>
+    <title>查找教会 – Holy Hour</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .page-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+        h1 { color: #1a1a6e; font-size: 2rem; margin-bottom: 12px; }
+        h1 + p { color: #555; margin-bottom: 30px; line-height: 1.7; }
+        h2 {
+            color: #2c2c7b;
+            border-bottom: 2px solid #2c2c7b;
+            padding-bottom: 5px;
+            margin: 28px 0 16px;
+        }
+        h3 { color: #444; }
+        .featured-church {
+            background-color: #f0f4ff;
+            border: 2px solid #2c2c7b;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .featured-church h2 {
+            border-bottom: none;
+            margin-top: 0;
+        }
+        .church-card {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fafafa;
+        }
+        .church-card h3 { margin-top: 0; }
+        .church-card p { margin: 5px 0; }
+        .state-section { margin-bottom: 30px; }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #3b2d8f;
+            text-decoration: none;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        footer {
+            background: #0f0f4a;
+            color: #aaa;
+            text-align: center;
+            padding: 36px 20px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        footer a { color: #b8a9ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-<h1>教堂</h1>
-<div class="language-switcher" style="background:#f0eeff;text-align:center;padding:18px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px;">
-    <a href="../churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">EN</a>
-    <a href="../es/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ES</a>
-    <a href="../de/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">DE</a>
-    <a href="../it/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">IT</a>
-    <a href="../fr/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">FR</a>
-    <a href="../pt/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">PT</a>
-    <a href="../he/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HE</a>
-    <a href="../ar/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AR</a>
-    <a href="../am/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AM</a>
-    <a href="../hi/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HI</a>
-    <a href="churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;background:#3b2d8f;color:#fff;">ZH</a>
-    <a href="../ja/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">JA</a>
-    <a href="../ko/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">KO</a>
-    <a href="../sw/churches.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">SW</a>
-</div>
+    <nav>
+        <div class="nav-inner">
+            <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="features.html">功能</a>
+                <a href="download.html">下载</a>
+                <a href="churches.html" class="active">查找教会</a>
+                <a href="contact.html">联系我们</a>
+                <a href="privacy.html">隐私</a>
+            </div>
+        </div>
+    </nav>
 
+    <div class="page-content">
+
+        <h1>查找教会</h1>
+        <p>无论你是在寻找固定的教会，还是只是来这里短暂停留，我们都希望这份名单能帮助你找到一个温暖、欢迎你的信仰群体。</p>
+
+        <!-- Featured Church -->
+        <div class="featured-church">
+            <h2>⭐ 推荐教会</h2>
+            <h3>Iglesia Monte Sinai - Pelea La Batalla</h3>
+            <p><strong>地址：</strong> 82 Vanderbilt Ave, West Hartford, CT 06110</p>
+            <p><strong>电话：</strong> (860) 680-6136</p>
+            <p><strong>聚会时间：</strong></p>
+            <ul>
+                <li>周日：11 AM – 1 PM</li>
+                <li>周四：7 PM – 9 PM</li>
+            </ul>
+        </div>
+
+        <!-- Other Churches by State -->
+        <h2>其他教会 – La Primera Iglesia de Dios 网络</h2>
+        <p>以下教会属于 La Primera Iglesia de Dios 网络。如果你还没有所属教会，欢迎你探访其中任何一间教会。</p>
+
+        <!-- Connecticut -->
+        <div class="state-section">
+            <h2>康涅狄格州（Connecticut）</h2>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - Hartford</h3>
+                <p><strong>地址：</strong> 45 Oliver Street, Hartford, CT 06016</p>
+                <p><strong>主教：</strong> Rev. Ismael Fernandez</p>
+                <p><strong>电话：</strong> 860-874-4657</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - New Haven</h3>
+                <p><strong>地址：</strong> 12 West St, New Haven, CT 06519</p>
+                <p><strong>执行秘书：</strong> Rev. Emmanuel Delgado</p>
+                <p><strong>电话：</strong> 860-882-2908</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - East Hartford</h3>
+                <p><strong>地址：</strong> 91 Tolland St, East Hartford, CT 06108</p>
+                <p><strong>执行财务：</strong> Rev. Eliseo Rodriguez</p>
+                <p><strong>电话：</strong> 860-328-0339</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - New Britain</h3>
+                <p><strong>地址：</strong> 33 Fern St, New Britain, CT 06053</p>
+                <p><strong>牧师：</strong> Rev. Samuel Delgado</p>
+                <p><strong>电话：</strong> 860-706-2063</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Massachusetts -->
+        <div class="state-section">
+            <h2>马萨诸塞州（Massachusetts）</h2>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - Holyoke</h3>
+                <p><strong>地址：</strong> 637 South Summer St, Holyoke, MA 01040</p>
+                <p><strong>副执行财务：</strong> Rev. Luis O. Martinez</p>
+                <p><strong>电话：</strong> 413-246-4111</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - Springfield</h3>
+                <p><strong>地址：</strong> 38 Hunter Pl, Springfield, MA 01109</p>
+                <p><strong>牧师：</strong> Rev. Evelyn Flores</p>
+                <p><strong>电话：</strong> 413-841-1903</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - New Bedford</h3>
+                <p><strong>地址：</strong> 435 Purchase St, New Bedford, MA 02740</p>
+                <p><strong>女牧师：</strong> Laura Colón</p>
+                <p><strong>电话：</strong> 508-617-6972</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - Jamaica Plain</h3>
+                <p><strong>地址：</strong> 171 Green St, Jamaica Plain, MA 02130</p>
+                <p><strong>牧师：</strong> Luis Lozada</p>
+                <p><strong>电话：</strong> 617-905-8618</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rhode Island -->
+        <div class="state-section">
+            <h2>罗德岛州（Rhode Island）</h2>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - Woonsocket</h3>
+                <p><strong>地址：</strong> Woonsocket, RI 02895</p>
+                <p><strong>牧师：</strong> Rev. Carlos Rivera</p>
+                <p><strong>电话：</strong> 401-309-2131</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- New Jersey -->
+        <div class="state-section">
+            <h2>新泽西州（New Jersey）</h2>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - Camden</h3>
+                <p><strong>地址：</strong> 1004 Chesnut St, Camden, NJ 08103</p>
+                <p><strong>牧师：</strong> Rev. Ivelise Quirindongo</p>
+                <p><strong>电话：</strong> 856-473-0585</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Pennsylvania -->
+        <div class="state-section">
+            <h2>宾夕法尼亚州（Pennsylvania）</h2>
+
+            <div class="church-card">
+                <h3>La Primera Iglesia de Dios - Harrisburg</h3>
+                <p><strong>地址：</strong> 1001 Lumber St, Middletown, PA 17057</p>
+                <p><strong>牧师：</strong> Luis Flores</p>
+                <p><strong>电话：</strong> 717-343-0125</p>
+                <p><strong>聚会时间：</strong></p>
+                <ul>
+                    <li>周一/周三/周五/周六：7 PM（直到圣灵指示“可以回家了”为止）</li>
+                </ul>
+            </div>
+        </div>
+
+        <a class="back-link" href="index.html">← 返回首页</a>
+    </div><!-- end .page-content -->
+
+    <footer>
+        <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — 祷告、经文与属灵成长</p>
+        <p style="margin-top:6px;">联系： <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+        <p style="margin-top:6px;font-style:italic;opacity:0.8;">基督快来了 — 欢迎所有教派 ✝</p>
+        <div class="footer-links">
+            <a href="index.html">首页</a>
+            <a href="about.html">关于我们</a>
+            <a href="features.html">功能</a>
+            <a href="download.html">下载</a>
+            <a href="churches.html">查找教会</a>
+            <a href="contact.html">联系我们</a>
+            <a href="privacy.html">隐私</a>
+        </div>
+        <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. All rights reserved.</p>
+        <p style="margin-top:6px;font-size:0.8rem;">教会信息来源： <a href="http://www.laprimeraiglesiadedios.com" target="_blank" rel="noopener noreferrer">La Primera Iglesia de Dios Incorporada</a>。</p>
+
+        <div class="language-switcher">
+            <a href="../churches.html">EN</a>
+            <a href="../es/churches.html">ES</a>
+            <a href="../de/churches.html">DE</a>
+            <a href="../it/churches.html">IT</a>
+            <a href="../fr/churches.html">FR</a>
+            <a href="../pt/churches.html">PT</a>
+            <a href="../he/churches.html">HE</a>
+            <a href="../ar/churches.html">AR</a>
+            <a href="../am/churches.html">AM</a>
+            <a href="../hi/churches.html">HI</a>
+            <a href="churches.html" class="active">ZH</a>
+            <a href="../ja/churches.html">JA</a>
+            <a href="../ko/churches.html">KO</a>
+            <a href="../sw/churches.html">SW</a>
+        </div>
+    </footer>
 </body>
 </html>
