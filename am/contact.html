@@ -4,26 +4,149 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ግንኙነት – Holy Hour</title>
+    <title>አግኙን & የጸሎት ጥያቄዎች – Holy Hour</title>
+    <!-- የCSS እንደ ስፓኒሽ አብነት ያስቀምጡ ወይም የተጋራ ፋይልን ይጠቀሙ -->
 </head>
 <body>
-<h1>ግንኙነት</h1>
-<div class="language-switcher" style="background:#f0eeff;text-align:center;padding:18px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px;">
-    <a href="../contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">EN</a>
-    <a href="../es/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ES</a>
-    <a href="../de/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">DE</a>
-    <a href="../it/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">IT</a>
-    <a href="../fr/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">FR</a>
-    <a href="../pt/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">PT</a>
-    <a href="../he/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HE</a>
-    <a href="../ar/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AR</a>
-    <a href="contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;background:#3b2d8f;color:#fff;">AM</a>
-    <a href="../hi/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HI</a>
-    <a href="../zh/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ZH</a>
-    <a href="../ja/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">JA</a>
-    <a href="../ko/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">KO</a>
-    <a href="../sw/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">SW</a>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">መነሻ</a>
+            <a href="about.html">ስለ እኛ</a>
+            <a href="features.html">ባህሪያት</a>
+            <a href="download.html">አውርድ</a>
+            <a href="churches.html">ቤተክርስቲያን ፈልግ</a>
+            <a href="contact.html" class="active">አግኙን</a>
+            <a href="privacy.html">ግላዊነት</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>አግኙን & የጸሎት ጥያቄዎች</h1>
+    <p>የጸሎት ጥያቄዎችዎን ለመላክ አትፈሩ — እኛ ከእርስዎ ጋር ለመጸለይ እዚህ ነን። ምንም ጥያቄ ትንሽ ወይም ትልቅ አይደለም።</p>
 </div>
+
+<div class="content">
+    <div class="contact-grid">
+
+        <!-- የጸሎት ጥያቄ ፎርም -->
+        <div class="form-section">
+            <h2>🙏 የጸሎት ጥያቄ ላክ</h2>
+            <p class="form-intro">ዴቦራ ለእርስዎ መጸለይ ክብር ይሆናል። ከታች ያለውን ፎርም ይሙሉ እና እሷ ጥያቄዎን በግል በጌታ ፊት ታቀርባለች። ተወዳጅ ናችሁ!</p>
+
+            <form id="prayer-form" onsubmit="handleSubmit(event)">
+
+                <div class="form-group">
+                    <label for="name">ስምዎ *</label>
+                    <input type="text" id="name" name="name" placeholder="ስምዎን ያስገቡ" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">ኢሜይልዎ *</label>
+                    <input type="email" id="email" name="email" placeholder="ኢሜይልዎን ያስገቡ" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prayer">የጸሎት ጥያቄዎ *</label>
+                    <textarea id="prayer" name="prayer" placeholder="እዚህ የጸሎት ጥያቄዎን ይጻፉ። እግዚአብሔር እያንዳንዱን ቃል ይሰማል — ዴቦራም እንዲሁ። ✝" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">🙏 ጥያቄ ላክ</button>
+                <p class="form-note">መረጃዎ ሚስጥራዊ ይቆያል። በመላክዎ የ<a href="privacy.html" style="color:#3b2d8f;">ግላዊነት ፖሊሲ</a>ያችንን ተቀብለዋል።</p>
+            </form>
+
+            <div id="success-message">
+                <strong>🙏 እናመሰግናለን! የጸሎት ጥያቄዎ ተቀብሏል።</strong><br>
+                ዴቦራ ለእርስዎ በግል ትጸልያለች። እግዚአብሔር ይባርክዎ! ✝
+            </div>
+        </div>
+
+        <!-- የአግኙን መረጃ -->
+        <div class="contact-info">
+            <h2>አግኙን</h2>
+
+            <div class="contact-card">
+                <div class="ci-icon">📧</div>
+                <h3>ኢሜይል ላኩ</h3>
+                <p>ለጸሎት ጥያቄዎች፣ ጥያቄዎች ወይም አስተያየት:<br>
+                <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+            </div>
+
+            <div class="contact-card">
+                <div class="ci-icon">📱</div>
+                <h3>መተግበሪያውን አውርዱ</h3>
+                <p>የጸሎት ጥያቄ ላኩ እና ሁሉንም ባህሪያት በ Holy Hour መተግበሪያ ውስጥ ያግኙ። ለ <a href="download.html">iOS እና Android</a> ይገኛል።</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="ci-icon">⛪</div>
+                <h3>ቤተክርስቲያን ፈልግ</h3>
+                <p>ማህበረሰብ ትፈልጋላችሁ? በአቅራቢያዎ ያለ ተቀባይነት ያለው ቤተክርስቲያን ለማግኘት እንረዳዎታለን። <a href="churches.html">ዝርዝር ይመልከቱ</a>.</p>
+            </div>
+
+            <div class="prayer-promise">
+                <div class="pp-icon">✝</div>
+                <p><strong>ዴቦራ በ Holy Hour በኩል ለሚላኩ ሁሉም ጥያቄዎች በግል ትጸልያለች።</strong> በዚህ ጉዞ ላይ ብቻዎን አይደሉም። ጌታ ይሰማዎታል — እኛም እንሰማዎታለን።</p>
+                <p class="verse">"መከራ ያለበት ማንም አለ? ይጸልይ።" — ያዕቆብ 5:13</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — ጸሎት፣ መጽሐፍ ቅዱስ እና መንፈሳዊ እድገት</p>
+    <p style="margin-top:6px;">አግኙን: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">ክርስቶስ በቅርቡ ይመጣል — ሁሉም ቤተክርስቲያናት እንኳን ደህና መጡ ✝</p>
+    <div class="footer-links">
+        <a href="index.html">መነሻ</a>
+        <a href="about.html">ስለ እኛ</a>
+        <a href="features.html">ባህሪያት</a>
+        <a href="download.html">አውርድ</a>
+        <a href="churches.html">ቤተክርስቲያን ፈልግ</a>
+        <a href="contact.html">አግኙን</a>
+        <a href="privacy.html">ግላዊነት</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. መብቶች ሁሉ የተጠበቁ ናቸው።</p>
+<div class="language-switcher">
+    <a href="../contact.html">EN</a>
+    <a href="../es/contact.html">ES</a>
+    <a href="../de/contact.html">DE</a>
+    <a href="../it/contact.html">IT</a>
+    <a href="../fr/contact.html">FR</a>
+    <a href="../pt/contact.html">PT</a>
+    <a href="../he/contact.html">HE</a>
+    <a href="../ar/contact.html">AR</a>
+    <a href="contact.html" class="active">AM</a>
+    <a href="../hi/contact.html">HI</a>
+    <a href="../zh/contact.html">ZH</a>
+    <a href="../ja/contact.html">JA</a>
+    <a href="../ko/contact.html">KO</a>
+    <a href="../sw/contact.html">SW</a>
+</div>
+</footer>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const prayer = document.getElementById('prayer').value;
+
+    const subject = encodeURIComponent('የጸሎት ጥያቄ ከ ' + name + ' – Holy Hour');
+    const body = encodeURIComponent(
+        'ስም: ' + name + '\\n' +
+        'ኢሜይል: ' + email + '\\n\\n' +
+        'የጸሎት ጥያቄ:\\n' + prayer
+    );
+    window.location.href = 'mailto:cristovieneprontobydeborah@gmail.com?subject=' + subject + '&body=' + body;
+    document.getElementById('success-message').style.display = 'block';
+    document.getElementById('prayer-form').reset();
+}
+</script>
 
 </body>
 </html>
