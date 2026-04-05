@@ -5,7 +5,161 @@
     <link rel="stylesheet" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funktionen – Holy Hour</title>
-    <!-- Paste your CSS here or keep the link if it's shared with other languages -->
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px 60px;
+        }
+        .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 14px; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+        .content { max-width: 1060px; margin: 0 auto; padding: 60px 20px; }
+
+        .section-title { text-align: center; font-size: 1.9rem; color: #1a1a6e; margin-bottom: 10px; }
+        .section-sub { text-align: center; color: #666; max-width: 560px; margin: 0 auto 48px; line-height: 1.7; }
+
+        .feature-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 56px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-row:last-of-type { border-bottom: none; }
+        .feature-row.reverse { flex-direction: row-reverse; }
+        .feature-visual {
+            flex: 0 0 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #3b2d8f, #6b21a8);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+        }
+        .feature-text { flex: 1; }
+        .feature-text h2 { color: #3b2d8f; font-size: 1.5rem; margin-bottom: 12px; }
+        .feature-text p { color: #555; line-height: 1.8; margin-bottom: 12px; }
+        .feature-text ul { list-style: none; padding: 0; }
+        .feature-text ul li { padding: 4px 0; color: #444; }
+        .feature-text ul li::before { content: "✓ "; color: #3b2d8f; font-weight: 700; }
+
+        .all-welcome {
+            background: linear-gradient(135deg, #3b2d8f, #6b21a8);
+            color: #fff;
+            border-radius: 16px;
+            padding: 48px 36px;
+            text-align: center;
+            margin: 48px 0;
+        }
+        .all-welcome h2 { font-size: 1.8rem; margin-bottom: 14px; }
+        .all-welcome p { max-width: 620px; margin: 0 auto 24px; opacity: 0.92; line-height: 1.7; }
+
+        .denoms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .denom-tag {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #3b2d8f;
+            padding: 12px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.97rem;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: #0f0f4a;
+            color: #aaa;
+            text-align: center;
+            padding: 36px 20px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        footer a { color: #b8a9ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+
+        @media (max-width: 640px) {
+            .feature-row, .feature-row.reverse { flex-direction: column; }
+            .feature-visual { flex: 0 0 120px; height: 120px; font-size: 3rem; width: 100%; }
+        }
+    
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
 
