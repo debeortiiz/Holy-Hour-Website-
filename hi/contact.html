@@ -4,26 +4,149 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>संपर्क – Holy Hour</title>
+    <title>संपर्क और प्रार्थना अनुरोध – Holy Hour</title>
+    <!-- CSS को स्पेनिश टेम्पलेट जैसा रखें या साझा फ़ाइल का उपयोग करें -->
 </head>
 <body>
-<h1>संपर्क</h1>
-<div class="language-switcher" style="background:#f0eeff;text-align:center;padding:18px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px;">
-    <a href="../contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">EN</a>
-    <a href="../es/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ES</a>
-    <a href="../de/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">DE</a>
-    <a href="../it/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">IT</a>
-    <a href="../fr/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">FR</a>
-    <a href="../pt/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">PT</a>
-    <a href="../he/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">HE</a>
-    <a href="../ar/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AR</a>
-    <a href="../am/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">AM</a>
-    <a href="contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;background:#3b2d8f;color:#fff;">HI</a>
-    <a href="../zh/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">ZH</a>
-    <a href="../ja/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">JA</a>
-    <a href="../ko/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">KO</a>
-    <a href="../sw/contact.html" style="color:#3b2d8f;text-decoration:none;padding:5px 11px;border:1px solid #c4b8f0;border-radius:4px;font-size:0.85rem;font-weight:600;">SW</a>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../index.html">✝ Holy Hour</a>
+        <div class="nav-links">
+            <a href="index.html">होम</a>
+            <a href="about.html">हमारे बारे में</a>
+            <a href="features.html">फ़ीचर्स</a>
+            <a href="download.html">डाउनलोड</a>
+            <a href="churches.html">कलीसिया खोजें</a>
+            <a href="contact.html" class="active">संपर्क</a>
+            <a href="privacy.html">गोपनीयता</a>
+        </div>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <h1>संपर्क और प्रार्थना अनुरोध</h1>
+    <p>अपने प्रार्थना अनुरोध भेजने में संकोच न करें — हम आपके साथ प्रार्थना करने के लिए यहाँ हैं। कोई भी अनुरोध छोटा या बड़ा नहीं है।</p>
 </div>
 
+<div class="content">
+    <div class="contact-grid">
+
+        <!-- प्रार्थना अनुरोध फ़ॉर्म -->
+        <div class="form-section">
+            <h2>🙏 प्रार्थना अनुरोध भेजें</h2>
+            <p class="form-intro">डेबोरा के लिए आपके लिए प्रार्थना करना सम्मान की बात होगी। नीचे दिया गया फ़ॉर्म भरें, और वह आपके अनुरोध को व्यक्तिगत रूप से प्रभु के सामने रखेगी। आप प्रिय हैं!</p>
+
+            <form id="prayer-form" onsubmit="handleSubmit(event)">
+
+                <div class="form-group">
+                    <label for="name">आपका नाम *</label>
+                    <input type="text" id="name" name="name" placeholder="अपना नाम दर्ज करें" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">आपका ईमेल *</label>
+                    <input type="email" id="email" name="email" placeholder="अपना ईमेल दर्ज करें" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prayer">आपका प्रार्थना अनुरोध *</label>
+                    <textarea id="prayer" name="prayer" placeholder="अपना अनुरोध यहाँ लिखें। परमेश्वर हर शब्द सुनता है — और डेबोरा भी। ✝" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">🙏 अनुरोध भेजें</button>
+                <p class="form-note">आपकी जानकारी गोपनीय रहेगी। भेजकर आप हमारी <a href="privacy.html" style="color:#3b2d8f;">गोपनीयता नीति</a> से सहमत होते हैं।</p>
+            </form>
+
+            <div id="success-message">
+                <strong>🙏 धन्यवाद! आपका प्रार्थना अनुरोध प्राप्त हो गया है।</strong><br>
+                डेबोरा आपके लिए व्यक्तिगत रूप से प्रार्थना करेंगी। परमेश्वर आपको आशीष दे! ✝
+            </div>
+        </div>
+
+        <!-- संपर्क जानकारी -->
+        <div class="contact-info">
+            <h2>हमसे संपर्क करें</h2>
+
+            <div class="contact-card">
+                <div class="ci-icon">📧</div>
+                <h3>ईमेल करें</h3>
+                <p>प्रार्थना अनुरोध, प्रश्न, या प्रतिक्रिया के लिए:<br>
+                <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+            </div>
+
+            <div class="contact-card">
+                <div class="ci-icon">📱</div>
+                <h3>ऐप डाउनल��ड करें</h3>
+                <p>प्रार्थना अनुरोध भेजें और Holy Hour ऐप में सभी फ़ीचर्स प्राप्त करें। <a href="download.html">iOS और Android</a> के लिए उपलब्ध।</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="ci-icon">⛪</div>
+                <h3>कलीसिया खोजें</h3>
+                <p>क्या आप समुदाय खोज रहे हैं? हम आपके पास एक स्वागत करने वाली कलीसिया खोजने में मदद करेंगे। <a href="churches.html">निर्देशिका देखें</a>.</p>
+            </div>
+
+            <div class="prayer-promise">
+                <div class="pp-icon">✝</div>
+                <p><strong>Holy Hour के माध्यम से भेजे गए हर अनुरोध के लिए डेबोरा व्यक्तिगत रूप से प्रार्थ���ा करती हैं।</strong> आप इस यात्रा में अकेले नहीं हैं। प्रभु आपको सुनता है — और हम भी।</p>
+                <p class="verse">"क्या तुम में कोई दुःखी है? वह प्रार्थना करे।" — याकूब 5:13</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — प्रार्थना, शास्त्र और आत्मिक विकास</p>
+    <p style="margin-top:6px;">संपर्क: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">मसीह जल्द आ रहे हैं — सभी संप्रदायों का स्वागत है ✝</p>
+    <div class="footer-links">
+        <a href="index.html">होम</a>
+        <a href="about.html">हमारे बारे में</a>
+        <a href="features.html">फ़ीचर्स</a>
+        <a href="download.html">डाउनलोड</a>
+        <a href="churches.html">कलीसिया खोजें</a>
+        <a href="contact.html">संपर्क</a>
+        <a href="privacy.html">गोपनीयता</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. सर्वाधिकार सुरक्षित।</p>
+<div class="language-switcher">
+    <a href="../contact.html">EN</a>
+    <a href="../es/contact.html">ES</a>
+    <a href="../de/contact.html">DE</a>
+    <a href="../it/contact.html">IT</a>
+    <a href="../fr/contact.html">FR</a>
+    <a href="../pt/contact.html">PT</a>
+    <a href="../he/contact.html">HE</a>
+    <a href="../ar/contact.html">AR</a>
+    <a href="../am/contact.html">AM</a>
+    <a href="contact.html" class="active">HI</a>
+    <a href="../zh/contact.html">ZH</a>
+    <a href="../ja/contact.html">JA</a>
+    <a href="../ko/contact.html">KO</a>
+    <a href="../sw/contact.html">SW</a>
+</div>
+</footer>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const prayer = document.getElementById('prayer').value;
+
+    const subject = encodeURIComponent('प्रार्थना अनुरोध: ' + name + ' – Holy Hour');
+    const body = encodeURIComponent(
+        'नाम: ' + name + '\\n' +
+        'ईमेल: ' + email + '\\n\\n' +
+        'प्रार्थना अनुरोध:\\n' + prayer
+    );
+    window.location.href = 'mailto:cristovieneprontobydeborah@gmail.com?subject=' + subject + '&body=' + body;
+    document.getElementById('success-message').style.display = 'block';
+    document.getElementById('prayer-form').reset();
+}
+</script>
+
 </body>
-</html>
+    </html>
