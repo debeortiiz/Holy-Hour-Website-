@@ -5,7 +5,161 @@
     <link rel="stylesheet" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기능 – Holy Hour</title>
-    <!-- 스페인어 템플릿과 동일한 CSS를 유지하거나 공유 스타일시트를 사용하세요 -->
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+
+        nav {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
+        .nav-links a {
+            color: #d4c8ff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 60%, #5b3ea6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 70px 20px 60px;
+        }
+        .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 14px; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+        .content { max-width: 1060px; margin: 0 auto; padding: 60px 20px; }
+
+        .section-title { text-align: center; font-size: 1.9rem; color: #1a1a6e; margin-bottom: 10px; }
+        .section-sub { text-align: center; color: #666; max-width: 560px; margin: 0 auto 48px; line-height: 1.7; }
+
+        .feature-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 56px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid #eee;
+        }
+        .feature-row:last-of-type { border-bottom: none; }
+        .feature-row.reverse { flex-direction: row-reverse; }
+        .feature-visual {
+            flex: 0 0 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #3b2d8f, #6b21a8);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+        }
+        .feature-text { flex: 1; }
+        .feature-text h2 { color: #3b2d8f; font-size: 1.5rem; margin-bottom: 12px; }
+        .feature-text p { color: #555; line-height: 1.8; margin-bottom: 12px; }
+        .feature-text ul { list-style: none; padding: 0; }
+        .feature-text ul li { padding: 4px 0; color: #444; }
+        .feature-text ul li::before { content: "✓ "; color: #3b2d8f; font-weight: 700; }
+
+        .all-welcome {
+            background: linear-gradient(135deg, #3b2d8f, #6b21a8);
+            color: #fff;
+            border-radius: 16px;
+            padding: 48px 36px;
+            text-align: center;
+            margin: 48px 0;
+        }
+        .all-welcome h2 { font-size: 1.8rem; margin-bottom: 14px; }
+        .all-welcome p { max-width: 620px; margin: 0 auto 24px; opacity: 0.92; line-height: 1.7; }
+
+        .denoms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .denom-tag {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #3b2d8f;
+            padding: 12px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.97rem;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+
+        footer {
+            background: #0f0f4a;
+            color: #aaa;
+            text-align: center;
+            padding: 36px 20px;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        footer a { color: #b8a9ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+
+        @media (max-width: 640px) {
+            .feature-row, .feature-row.reverse { flex-direction: column; }
+            .feature-visual { flex: 0 0 120px; height: 120px; font-size: 3rem; width: 100%; }
+        }
+    
+        .language-switcher {
+            background: #f0eeff;
+            text-align: center;
+            padding: 18px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+        }
+        .language-switcher a {
+            color: #3b2d8f;
+            text-decoration: none;
+            padding: 5px 11px;
+            border: 1px solid #c4b8f0;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s, color 0.2s;
+        }
+        .language-switcher a:hover, .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
 
@@ -80,4 +234,85 @@
         <div class="feature-visual">⛪</div>
         <div class="feature-text">
             <h2>교회 찾기</h2>
-            <p>누구도 믿음의 길을 혼자 걸어야 할 필요는 없습니다. Holy Hour는 예배하고 성장하며
+            <p>누구도 믿음의 길을 혼자 걸어야 할 필요는 없습니다. Holy Hour는 예배하고 성장하며 지역 사회의 다른 신자들과 교제할 수 있는 현지 교회를 찾도록 도와드립니다.</p>
+            <ul>
+                <li>위치별 교회 목록</li>
+                <li>예배 시간 및 연락처 정보</li>
+                <li>다양한 교단 포함</li>
+                <li>간편한 지도 연동</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feature-row">
+        <div class="feature-visual">✉️</div>
+        <div class="feature-text">
+            <h2>기도 요청</h2>
+            <p>기도 요청을 Deborah와 Holy Hour 기도팀에 직접 보내세요. 저희는 중보기도의 능력을 믿으며, 여러분과 함께 주님 앞에 나아갈 수 있어 영광입니다.</p>
+            <ul>
+                <li>언제든지 기도 요청 제출</li>
+                <li>Deborah의 개인 기도</li>
+                <li>비밀 보장 및 compassionate 대응</li>
+                <li>직접 이메일 응답 가능</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="all-welcome">
+        <h2>✝ 모든 교단을 환영합니다</h2>
+        <p>Holy Hour는 예수 그리스도를 믿는 모든 신자를 위한 것입니다. 침례교, 오순절, 감리교, 장로교, 무교단, 또는 어떤 전통이든 — 여러분을 환영합니다. 우리는 그리스도를 향한 사랑으로 하나입니다.</p>
+        <div class="denoms">
+            <span class="denom-tag">침례교</span>
+            <span class="denom-tag">오순절</span>
+            <span class="denom-tag">감리교</span>
+            <span class="denom-tag">장로교</span>
+            <span class="denom-tag">무교단</span>
+            <span class="denom-tag">복음주의</span>
+            <span class="denom-tag">루터교</span>
+            <span class="denom-tag">성공회</span>
+            <span class="denom-tag">그 외 더!</span>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:48px;">
+        <h2 style="color:#1a1a6e; margin-bottom:14px;">Holy Hour를 시작할 준비가 되셨나요?</h2>
+        <p style="color:#555; margin-bottom:24px; line-height:1.7;">지금 앱을 다운로드하고, 더 깊은 믿음과 기도, 영적 성장의 여정을 시작하세요.</p>
+        <a href="download.html" class="btn" style="background:#3b2d8f;color:#fff;">지금 다운로드</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — 기도, 성경, 영적 성장</p>
+    <p style="margin-top:6px;">연락처: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+    <p style="margin-top:6px;font-style:italic;opacity:0.8;">그리스도께서 곧 오십니다 — 모든 교단을 환영합니다 ✝</p>
+    <div class="footer-links">
+        <a href="index.html">홈</a>
+        <a href="about.html">소개</a>
+        <a href="features.html">기능</a>
+        <a href="download.html">다운로드</a>
+        <a href="churches.html">교회 찾기</a>
+        <a href="contact.html">문의</a>
+        <a href="privacy.html">개인정보</a>
+    </div>
+    <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. All rights reserved.</p>
+<div class="language-switcher">
+    <a href="../features.html">EN</a>
+    <a href="../es/features.html">ES</a>
+    <a href="../de/features.html">DE</a>
+    <a href="../it/features.html">IT</a>
+    <a href="../fr/features.html">FR</a>
+    <a href="../pt/features.html">PT</a>
+    <a href="../he/features.html">HE</a>
+    <a href="../ar/features.html">AR</a>
+    <a href="../am/features.html">AM</a>
+    <a href="../hi/features.html">HI</a>
+    <a href="../zh/features.html">ZH</a>
+    <a href="../ja/features.html">JA</a>
+    <a href="features.html" class="active">KO</a>
+    <a href="../sw/features.html">SW</a>
+</div>
+</footer>
+
+</body>
+</html>
