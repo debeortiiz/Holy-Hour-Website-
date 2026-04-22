@@ -1,7 +1,7 @@
 /**
  * language.js – Persistent language selection for Holy Hour Website
  *
- * Behaviour:
+ * Behavior:
  *  • On every page load the script determines the current language from the
  *    URL path (e.g. /es/about.html → "es", /about.html → "en").
  *  • If the URL already contains a language prefix the user's preference is
