@@ -100,21 +100,28 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 6px;
+            gap: 10px;
         }
         .language-switcher a {
             color: #3b2d8f;
             text-decoration: none;
-            padding: 5px 11px;
-            border: 1px solid #c4b8f0;
-            border-radius: 4px;
+            padding: 8px 14px;
+            border: 2px solid #c4b8f0;
+            border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
-            transition: background 0.2s, color 0.2s;
+            transition: all 0.2s;
+            display: inline-block;
         }
-        .language-switcher a:hover, .language-switcher a.active {
+        .language-switcher a:hover {
             background: #3b2d8f;
             color: #fff;
+            border-color: #3b2d8f;
+        }
+        .language-switcher a.active {
+            background: #3b2d8f;
+            color: #fff;
+            border-color: #3b2d8f;
         }
     </style>
 </head>
@@ -201,6 +208,30 @@
             <ul>
                 <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
+        </div>
+
+        <div class="church-card">
+            <h3>La Casa Del Alfarero</h3>
+            <p><strong>Dirección:</strong> 1184 Burnside Ave, East Hartford, CT</p>
+            <p><strong>Teléfono:</strong> (860) 380-6274</p>
+            <p><strong>Horarios de Servicio:</strong></p>
+            <ul>
+                <li>Jueves: 7 PM</li>
+                <li>Viernes: 7 PM</li>
+                <li>Domingo: 2 PM</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- República Dominicana -->
+    <div class="state-section">
+        <h2>República Dominicana</h2>
+
+        <div class="church-card">
+            <h3>Ministerio del Pastor Ernesto Cuevas</h3>
+            <p><strong>Pastor:</strong> Pastor Ernesto Cuevas</p>
+            <p><strong>Dirección:</strong> Calle Diario Gome #65, Bellas Colinas, Santo Domingo, Dominican Republic 10103</p>
+            <p><strong>Teléfono:</strong> 829-321-9700</p>
         </div>
     </div>
 
