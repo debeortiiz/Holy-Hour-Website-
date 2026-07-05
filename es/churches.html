@@ -8,124 +8,35 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
-
-        nav {
-            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
-            padding: 0 20px;
-        }
-        .nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 14px 0;
-        }
+        nav { background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%); padding: 0 20px; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 14px 0; }
         .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
         .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
-        .nav-links a {
-            color: #d4c8ff;
-            text-decoration: none;
-            padding: 6px 10px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            transition: background 0.2s, color 0.2s;
-        }
-        .nav-links a:hover, .nav-links a.active {
-            background: rgba(255,255,255,0.15);
-            color: #fff;
-        }
-
-        .page-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px 60px;
-        }
+        .nav-links a { color: #d4c8ff; text-decoration: none; padding: 6px 10px; border-radius: 4px; font-size: 0.9rem; transition: background 0.2s, color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.15); color: #fff; }
+        .page-content { max-width: 900px; margin: 0 auto; padding: 40px 20px 60px; }
         h1 { color: #1a1a6e; font-size: 2rem; margin-bottom: 12px; }
         h1 + p { color: #555; margin-bottom: 30px; line-height: 1.7; }
-        h2 {
-            color: #2c2c7b;
-            border-bottom: 2px solid #2c2c7b;
-            padding-bottom: 5px;
-            margin: 28px 0 16px;
-        }
+        h2 { color: #2c2c7b; border-bottom: 2px solid #2c2c7b; padding-bottom: 5px; margin: 28px 0 16px; }
         h3 { color: #444; }
-        .featured-church {
-            background-color: #f0f4ff;
-            border: 2px solid #2c2c7b;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-        .featured-church h2 {
-            border-bottom: none;
-            margin-top: 0;
-        }
+        .featured-church { background-color: #f0f4ff; border: 2px solid #2c2c7b; border-radius: 8px; padding: 20px; margin-bottom: 30px; }
+        .featured-church h2 { border-bottom: none; margin-top: 0; }
         .network-intro { background-color: #f9f7ff; border-left: 4px solid #3b2d8f; padding: 15px; margin-bottom: 25px; }
         .network-intro p { margin: 5px 0; color: #555; }
         .network-intro a { color: #3b2d8f; font-weight: 600; }
-        .church-card {
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 15px;
-            background-color: #fafafa;
-        }
+        .church-card { border: 1px solid #ccc; border-radius: 6px; padding: 15px; margin-bottom: 15px; background-color: #fafafa; }
         .church-card h3 { margin-top: 0; }
         .church-card p { margin: 5px 0; }
         .state-section { margin-bottom: 30px; }
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #3b2d8f;
-            text-decoration: none;
-        }
+        .back-link { display: inline-block; margin-top: 30px; color: #3b2d8f; text-decoration: none; }
         .back-link:hover { text-decoration: underline; }
-
-        footer {
-            background: #0f0f4a;
-            color: #aaa;
-            text-align: center;
-            padding: 36px 20px;
-            font-size: 0.9rem;
-            line-height: 1.8;
-        }
+        footer { background: #0f0f4a; color: #aaa; text-align: center; padding: 36px 20px; font-size: 0.9rem; line-height: 1.8; }
         footer a { color: #b8a9ff; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
         footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
-
-        .language-switcher {
-            background: #f0eeff;
-            text-align: center;
-            padding: 18px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-        .language-switcher a {
-            color: #3b2d8f;
-            text-decoration: none;
-            padding: 8px 14px;
-            border: 2px solid #c4b8f0;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.2s;
-            display: inline-block;
-        }
-        .language-switcher a:hover {
-            background: #3b2d8f;
-            color: #fff;
-            border-color: #3b2d8f;
-        }
-        .language-switcher a.active {
-            background: #3b2d8f;
-            color: #fff;
-            border-color: #3b2d8f;
-        }
+        .language-switcher { background: #f0eeff; text-align: center; padding: 18px 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+        .language-switcher a { color: #3b2d8f; text-decoration: none; padding: 5px 11px; border: 1px solid #c4b8f0; border-radius: 4px; font-size: 0.85rem; font-weight: 600; transition: background 0.2s, color 0.2s; }
+        .language-switcher a:hover, .language-switcher a.active { background: #3b2d8f; color: #fff; }
     </style>
 </head>
 <body>
@@ -162,7 +73,7 @@
     </div>
 
     <!-- Otras Iglesias por Estado -->
-    <h2>Otras Iglesias – Red La Primera Iglesia de Dios</h2>
+    <h2>Otras Iglesias – Red La Primera Iglesia de Dios, Inc.</h2>
     <div class="network-intro">
         <p>Las siguientes iglesias forman parte de la red <a href="http://www.laprimeraiglesiadedios.com" target="_blank" rel="noopener noreferrer"><strong>La Primera Iglesia de Dios, Inc.</strong></a> Si no tienes una iglesia donde congregarte, eres bienvenido/a a visitar cualquiera de estas congregaciones.</p>
     </div>
@@ -178,7 +89,7 @@
             <p><strong>Teléfono:</strong> 860-874-4657</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
 
@@ -189,7 +100,20 @@
             <p><strong>Teléfono:</strong> 860-882-2908</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+            </ul>
+        </div>
+
+        <div class="church-card">
+            <h3>Nueva Iglesia Bautista del Testamento</h3>
+            <p><strong>Dirección:</strong> 111 Ash St, East Hartford, CT 06108</p>
+            <p><strong>Teléfono:</strong> (860) 290-6696</p>
+            <p><strong>Sitio Web:</strong> <a href="https://www.NewTestamentBaptistchurch.com" target="_blank" rel="noopener noreferrer">www.NewTestamentBaptistchurch.com</a></p>
+            <p><strong>Horarios de Servicio:</strong></p>
+            <ul>
+                <li>Domingo por la Mañana: 10am &amp; 11am</li>
+                <li>Domingo por la Noche: 6pm</li>
+                <li>Miércoles por la Noche: 7pm</li>
             </ul>
         </div>
 
@@ -200,7 +124,7 @@
             <p><strong>Teléfono:</strong> 860-328-0339</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
 
@@ -211,7 +135,7 @@
             <p><strong>Teléfono:</strong> 860-706-2063</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
 
@@ -270,7 +194,7 @@
             <p><strong>Teléfono:</strong> 413-246-4111</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
 
@@ -281,7 +205,7 @@
             <p><strong>Teléfono:</strong> 413-841-1903</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
 
@@ -292,7 +216,7 @@
             <p><strong>Teléfono:</strong> 508-617-6972</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
 
@@ -303,7 +227,7 @@
             <p><strong>Teléfono:</strong> 617-905-8618</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
     </div>
@@ -319,7 +243,7 @@
             <p><strong>Teléfono:</strong> 401-309-2131</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
     </div>
@@ -335,7 +259,7 @@
             <p><strong>Teléfono:</strong> 856-473-0585</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
     </div>
@@ -351,8 +275,26 @@
             <p><strong>Teléfono:</strong> 717-343-0125</p>
             <p><strong>Horarios de Servicio:</strong></p>
             <ul>
-                <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
+                <li>Lunes, Miércoles, Viernes &amp; Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
+        </div>
+    </div>
+
+    <!-- Texas -->
+    <div class="state-section">
+        <h2>Texas</h2>
+
+        <div class="church-card">
+            <h3>Casa de Dios de Israel</h3>
+            <p><strong>Dirección:</strong> 1522 Federal Rd, Suite 16, Houston, TX 77015</p>
+            <p><strong>Pastores:</strong> Daniel Rodriguez y Daisy Rodriguez</p>
+        </div>
+
+        <div class="church-card">
+            <h3>Iglesia Casa de Dios Houston</h3>
+            <p><strong>Dirección:</strong> 13120 Ashford Point Dr., Houston, TX 77082</p>
+            <p><strong>Tel:</strong> (281) 416-5281</p>
+            <p><strong>Sitio Web:</strong> <a href="https://casadedioshouston.org" target="_blank" rel="noopener noreferrer">casadedioshouston.org</a></p>
         </div>
     </div>
 
@@ -368,25 +310,41 @@
         </div>
     </div>
 
-    <a href="index.html" class="back-link">← Volver al Inicio</a>
-
-    </div>
-
-    <div class="language-switcher">
-        <a href="../churches.html">English</a>
-        <a href="churches.html" class="active">Español</a>
-        <a href="../pt/churches.html">Português</a>
-        <a href="../fr/churches.html">Français</a>
-        <a href="../ar/churches.html">العربية</a>
-        <a href="../am/churches.html">አማርኛ</a>
-    </div>
+    <a class="back-link" href="index.html">← Volver al Inicio</a>
+    </div><!-- end .page-content -->
 
     <footer>
-        <p>&copy; 2024 Holy Hour. Todos los derechos reservados.</p>
+        <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — Oración, Escritura &amp; Crecimiento Espiritual</p>
+        <p style="margin-top:6px;">Contacto: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
+        <p style="margin-top:6px;font-style:italic;opacity:0.8;">Cristo Viene Pronto — Todas las denominaciones son bienvenidas ✝</p>
         <div class="footer-links">
-            <a href="privacy.html">Privacidad</a>
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Acerca de</a>
+            <a href="features.html">Funciones</a>
+            <a href="download.html">Descargar</a>
+            <a href="churches.html">Encontrar Iglesia</a>
             <a href="contact.html">Contacto</a>
+            <a href="privacy.html">Política de Privacidad</a>
         </div>
+        <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. Todos los derechos reservados.</p>
+        <p style="margin-top:6px;font-size:0.8rem;">Información de la iglesia obtenida de <a href="http://www.laprimeraiglesiadedios.com" target="_blank" rel="noopener noreferrer">www.laprimeraiglesiadedios.com</a></p>
+        <div class="language-switcher">
+        <a href="../churches.html">EN</a>
+        <a href="churches.html" class="active">ES</a>
+        <a href="../de/churches.html">DE</a>
+        <a href="../it/churches.html">IT</a>
+        <a href="../fr/churches.html">FR</a>
+        <a href="../pt/churches.html">PT</a>
+        <a href="../he/churches.html">HE</a>
+        <a href="../ar/churches.html">AR</a>
+        <a href="../am/churches.html">AM</a>
+        <a href="../hi/churches.html">HI</a>
+        <a href="../zh/churches.html">ZH</a>
+        <a href="../ja/churches.html">JA</a>
+        <a href="../ko/churches.html">KO</a>
+        <a href="../sw/churches.html">SW</a>
+    </div>
     </footer>
+    <script src="../language.js"></script>
 </body>
 </html>
