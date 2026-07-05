@@ -8,114 +8,32 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
-
-        nav {
-            background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%);
-            padding: 0 20px;
-        }
-        .nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 14px 0;
-        }
+        nav { background: linear-gradient(135deg, #1a1a6e 0%, #3b2d8f 100%); padding: 0 20px; }
+        .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 14px 0; }
         .nav-brand { color: #fff; font-size: 1.3rem; font-weight: 700; text-decoration: none; }
         .nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
-        .nav-links a {
-            color: #d4c8ff;
-            text-decoration: none;
-            padding: 6px 10px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            transition: background 0.2s, color 0.2s;
-        }
-        .nav-links a:hover, .nav-links a.active {
-            background: rgba(255,255,255,0.15);
-            color: #fff;
-        }
-
-        .page-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px 60px;
-        }
+        .nav-links a { color: #d4c8ff; text-decoration: none; padding: 6px 10px; border-radius: 4px; font-size: 0.9rem; transition: background 0.2s, color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.15); color: #fff; }
+        .page-content { max-width: 900px; margin: 0 auto; padding: 40px 20px 60px; }
         h1 { color: #1a1a6e; font-size: 2rem; margin-bottom: 12px; }
         h1 + p { color: #555; margin-bottom: 30px; line-height: 1.7; }
-        h2 {
-            color: #2c2c7b;
-            border-bottom: 2px solid #2c2c7b;
-            padding-bottom: 5px;
-            margin: 28px 0 16px;
-        }
+        h2 { color: #2c2c7b; border-bottom: 2px solid #2c2c7b; padding-bottom: 5px; margin: 28px 0 16px; }
         h3 { color: #444; }
-        .featured-church {
-            background-color: #f0f4ff;
-            border: 2px solid #2c2c7b;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-        .featured-church h2 {
-            border-bottom: none;
-            margin-top: 0;
-        }
-        .church-card {
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 15px;
-            background-color: #fafafa;
-        }
+        .featured-church { background-color: #f0f4ff; border: 2px solid #2c2c7b; border-radius: 8px; padding: 20px; margin-bottom: 30px; }
+        .featured-church h2 { border-bottom: none; margin-top: 0; }
+        .church-card { border: 1px solid #ccc; border-radius: 6px; padding: 15px; margin-bottom: 15px; background-color: #fafafa; }
         .church-card h3 { margin-top: 0; }
         .church-card p { margin: 5px 0; }
         .state-section { margin-bottom: 30px; }
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #3b2d8f;
-            text-decoration: none;
-        }
+        .back-link { display: inline-block; margin-top: 30px; color: #3b2d8f; text-decoration: none; }
         .back-link:hover { text-decoration: underline; }
-
-        footer {
-            background: #0f0f4a;
-            color: #aaa;
-            text-align: center;
-            padding: 36px 20px;
-            font-size: 0.9rem;
-            line-height: 1.8;
-        }
+        footer { background: #0f0f4a; color: #aaa; text-align: center; padding: 36px 20px; font-size: 0.9rem; line-height: 1.8; }
         footer a { color: #b8a9ff; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
         footer .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
-
-        .language-switcher {
-            background: #f0eeff;
-            text-align: center;
-            padding: 18px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 6px;
-        }
-        .language-switcher a {
-            color: #3b2d8f;
-            text-decoration: none;
-            padding: 5px 11px;
-            border: 1px solid #c4b8f0;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: background 0.2s, color 0.2s;
-        }
-        .language-switcher a:hover, .language-switcher a.active {
-            background: #3b2d8f;
-            color: #fff;
-        }
+        .language-switcher { background: #f0eeff; text-align: center; padding: 18px 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+        .language-switcher a { color: #3b2d8f; text-decoration: none; padding: 5px 11px; border: 1px solid #c4b8f0; border-radius: 4px; font-size: 0.85rem; font-weight: 600; transition: background 0.2s, color 0.2s; }
+        .language-switcher a:hover, .language-switcher a.active { background: #3b2d8f; color: #fff; }
     </style>
 </head>
 <body>
@@ -134,11 +52,8 @@
         </div>
     </nav>
     <div class="page-content">
-
     <h1>Encontrar una Iglesia</h1>
     <p>Ya sea que estés buscando una iglesia donde congregarte o simplemente estés de visita en la zona, esperamos que esta lista te ayude a encontrar una comunidad de fe acogedora.</p>
-
-    <!-- Iglesia Destacada -->
     <div class="featured-church">
         <h2>⭐ Iglesia Destacada</h2>
         <h3>Iglesia Monte Sinai - Pelea La Batalla</h3>
@@ -150,15 +65,10 @@
             <li>Jueves: 7 PM – 9 PM</li>
         </ul>
     </div>
-
-    <!-- Otras Iglesias por Estado -->
-    <h2>Otras Iglesias – Red La Primera Iglesia de Dios</h2>
-    <p>Las siguientes iglesias forman parte de la red La Primera Iglesia de Dios. Si no tienes una iglesia donde congregarte, eres bienvenido/a a visitar cualquiera de estas congregaciones.</p>
-
-    <!-- Connecticut -->
+    <h2>La Primera Iglesia De Dios Incorporada – Red</h2>
+    <p>Las siguientes iglesias forman parte de la red La Primera Iglesia De Dios Incorporada. Si no tienes una iglesia donde congregarte, eres bienvenido/a a visitar cualquiera de estas congregaciones.</p>
     <div class="state-section">
         <h2>Connecticut</h2>
-
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - Hartford</h3>
             <p><strong>Dirección:</strong> 45 Oliver Street, Hartford, CT 06016</p>
@@ -169,7 +79,6 @@
                 <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
-
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - New Haven</h3>
             <p><strong>Dirección:</strong> 12 West St, New Haven, CT 06519</p>
@@ -180,7 +89,6 @@
                 <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
-
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - East Hartford</h3>
             <p><strong>Dirección:</strong> 91 Tolland St, East Hartford, CT 06108</p>
@@ -191,7 +99,6 @@
                 <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
-
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - New Britain</h3>
             <p><strong>Dirección:</strong> 33 Fern St, New Britain, CT 06053</p>
@@ -202,43 +109,9 @@
                 <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
-
-        <div class="church-card">
-            <h3>Mi Lugar De Adoración</h3>
-            <p><strong>Nombre:</strong> Iglesia de Dios Pentecostés Pozo de Jacob Inc.</p>
-            <p><strong>Dirección:</strong> 419 Franklin Avenue, Hartford, CT 06114</p>
-            <p><strong>Pastora:</strong> Revda. Alejandra Hernandez</p>
-            <p><strong>Teléfono:</strong> (860) 610-9379</p>
-            <p><strong>Orden de Servicios:</strong></p>
-            <ul>
-                <li>Lunes - Cultos en los Hogares: 7:00 PM</li>
-                <li>Martes - Fraternidad de Damas: 7:00 PM</li>
-                <li>Miércoles - Instituto Bíblico Emaús/Estudiantes: 7:00 PM</li>
-                <li>Viernes - Fraternidad de Niños/Jóvenes: 7:00 PM</li>
-                <li>Domingo - Escuela Dominical: 10:00 AM</li>
-                <li>Domingo - Cultos Evangélicos: 12:00 PM</li>
-            </ul>
-        </div>
-
-        <div class="church-card">
-            <h3>Iglesia Bautista De Gracia</h3>
-            <p><strong>Dirección:</strong> 830 Marshall Phelps Rd., Windsor, CT 06095</p>
-            <p><strong>Teléfono:</strong> (860) 688-3847</p>
-            <p><strong>Horarios de Servicio:</strong></p>
-            <ul>
-                <li>Cada Domingo - Grupos Pequeños: 10:00 AM</li>
-                <li>Servicios de Adoración: 11:00 AM</li>
-                <li>Servicio en Español: 1:00 PM</li>
-                <li>Segundo Domingo - Servicio Vespertino: 6:00 PM</li>
-                <li>Miércoles - Reunión de Oración: 6:00 PM</li>
-            </ul>
-        </div>
     </div>
-
-    <!-- Massachusetts -->
     <div class="state-section">
         <h2>Massachusetts</h2>
-
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - Holyoke</h3>
             <p><strong>Dirección:</strong> 637 South Summer St, Holyoke, MA 01040</p>
@@ -249,7 +122,6 @@
                 <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
-
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - Springfield</h3>
             <p><strong>Dirección:</strong> 38 Hunter Pl, Springfield, MA 01109</p>
@@ -260,7 +132,6 @@
                 <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
-
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - New Bedford</h3>
             <p><strong>Dirección:</strong> 435 Purchase St, New Bedford, MA 02740</p>
@@ -271,7 +142,6 @@
                 <li>Lunes, Miércoles, Viernes y Sábados: 7 PM (hasta que el Espíritu Santo indique que es hora de irse a casa)</li>
             </ul>
         </div>
-
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - Jamaica Plain</h3>
             <p><strong>Dirección:</strong> 171 Green St, Jamaica Plain, MA 02130</p>
@@ -283,11 +153,8 @@
             </ul>
         </div>
     </div>
-
-    <!-- Rhode Island -->
     <div class="state-section">
         <h2>Rhode Island</h2>
-
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - Woonsocket</h3>
             <p><strong>Dirección:</strong> Woonsocket, RI 02895</p>
@@ -299,11 +166,8 @@
             </ul>
         </div>
     </div>
-
-    <!-- New Jersey -->
     <div class="state-section">
-        <h2>Nueva Jersey</h2>
-
+        <h2>New Jersey</h2>
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - Camden</h3>
             <p><strong>Dirección:</strong> 1004 Chesnut St, Camden, NJ 08103</p>
@@ -315,11 +179,8 @@
             </ul>
         </div>
     </div>
-
-    <!-- Pennsylvania -->
     <div class="state-section">
-        <h2>Pensilvania</h2>
-
+        <h2>Pennsylvania</h2>
         <div class="church-card">
             <h3>La Primera Iglesia de Dios - Harrisburg</h3>
             <p><strong>Dirección:</strong> 1001 Lumber St, Middletown, PA 17057</p>
@@ -331,10 +192,59 @@
             </ul>
         </div>
     </div>
-
+    <h2>Otras Iglesias</h2>
+    <div class="state-section">
+        <h2>Connecticut (Otras)</h2>
+        <div class="church-card">
+            <h3>Mi Lugar De Adoración</h3>
+            <p><strong>Nombre:</strong> Iglesia de Dios Pentecostés Pozo de Jacob Inc.</p>
+            <p><strong>Dirección:</strong> 419 Franklin Avenue, Hartford, CT 06114</p>
+            <p><strong>Pastor:</strong> Revda. Alejandra Hernandez</p>
+            <p><strong>Teléfono:</strong> (860) 610-9379</p>
+            <p><strong>Horarios de Servicio:</strong></p>
+            <ul>
+                <li>Lunes - Cultos en casas: 7:00 PM</li>
+                <li>Martes - Hermandad de mujeres: 7:00 PM</li>
+                <li>Miércoles - Instituto Bíblico Emaús/Estudiantes: 7:00 PM</li>
+                <li>Viernes - Hermandad de niños y jóvenes: 7:00 PM</li>
+                <li>Domingo - Escuela dominical: 10:00 AM</li>
+                <li>Domingo - Cultos evangélicos: 12:00 PM</li>
+            </ul>
+        </div>
+        <div class="church-card">
+            <h3>Iglesia Bautista De Gracia</h3>
+            <p><strong>Dirección:</strong> 830 Marshall Phelps Rd., Windsor, CT 06095</p>
+            <p><strong>Teléfono:</strong> (860) 688-3847</p>
+            <p><strong>Horarios de Servicio:</strong></p>
+            <ul>
+                <li>Cada domingo - Grupos pequeños: 10:00 AM</li>
+                <li>Culto de adoración: 11:00 AM</li>
+                <li>Culto en español: 1:00 PM</li>
+                <li>Segundo domingo - Culto vespertino: 6:00 PM</li>
+                <li>Miércoles - Reunión de oración: 6:00 PM</li>
+            </ul>
+        </div>
+        <div class="church-card">
+            <h3>La Casa Del Alfarero</h3>
+            <p><strong>Dirección:</strong> 1184 Burnside Ave, East Hartford, CT</p>
+            <p><strong>Teléfono:</strong> (860) 380-6274</p>
+            <p><strong>Horarios de Servicio:</strong></p>
+            <ul>
+                <li>Viernes y jueves: 7:00 PM</li>
+                <li>Domingo: 2:00 PM</li>
+            </ul>
+        </div>
+    </div>
+    <div class="state-section">
+        <h2>República Dominicana</h2>
+        <div class="church-card">
+            <h3>Pastor Ernesto Cuevas</h3>
+            <p><strong>Dirección:</strong> Calle Diario Gome #65, Bellas Colinas, Santo Domingo, República Dominicana 10103</p>
+            <p><strong>Teléfono:</strong> 829-321-9700</p>
+        </div>
+    </div>
     <a class="back-link" href="index.html">← Volver al Inicio</a>
-    </div><!-- end .page-content -->
-
+    </div>
     <footer>
         <p>✝ <strong style="color:#d4c8ff;">Holy Hour</strong> — Oración, Escrituras y Crecimiento Espiritual</p>
         <p style="margin-top:6px;">Contacto: <a href="mailto:cristovieneprontobydeborah@gmail.com">cristovieneprontobydeborah@gmail.com</a></p>
@@ -348,8 +258,8 @@
             <a href="contact.html">Contacto</a>
             <a href="privacy.html">Privacidad</a>
         </div>
-        <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. All rights reserved.</p>
-        <p style="margin-top:6px;font-size:0.8rem;">Información de iglesias obtenida de <a href="http://www.laprimeraiglesiadedios.com" target="_blank" rel="noopener noreferrer">La Primera Iglesia de Dios Incorporada</a>.</p>
+        <p style="margin-top:16px;font-size:0.8rem;">&copy; 2024 Holy Hour. Todos los derechos reservados.</p>
+        <p style="margin-top:6px;font-size:0.8rem;">Información de iglesias de <a href="http://www.laprimeraiglesiadedios.com" target="_blank" rel="noopener noreferrer">La Primera Iglesia De Dios Incorporada</a>.</p>
     <div class="language-switcher">
         <a href="../churches.html">EN</a>
         <a href="churches.html" class="active">ES</a>
